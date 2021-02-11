@@ -1,9 +1,10 @@
 import { css } from '@emotion/react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import ShareButtons from '../components/share/ShareButtons';
+import { Button } from '../components';
 
 const containerStyle = css({
-  position: 'relative',
-  height: '500px'
+  height: 300
 });
 
 const introStyle = css({
@@ -11,18 +12,17 @@ const introStyle = css({
   width: '100%'
 });
 
-const linkStyle = css({
-  display: 'block',
-  marginTop: 100
-});
-
 const Main = () => {
+  const url = 'https://zaemul.github.io/test';
+  const history = useHistory();
+  const goToTestMain = () => {
+    history.push('/tteokbokki/main');
+  };
   return (
     <div css={containerStyle}>
       <div css={introStyle}>
-        <Link to={'/test/tteokbokki'} css={linkStyle}>TEST 1 (떡볶이)</Link>
-        <Link to={'/test/tteokbokki'} css={linkStyle}>TEST 2 (???)</Link>
-        <Link to={'/test/tteokbokki'} css={linkStyle}>TEST 3 (???)</Link>
+        <Button onClick={goToTestMain} css={{ marginTop: 100 }}>1. 떡볶이 심리테스트</Button>
+        <ShareButtons url={url} />
       </div>
     </div>
   );

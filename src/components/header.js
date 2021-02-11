@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import logo from '../tteokbokki.png';
+import logo from '../assets/tteokbokki.png';
 
 const headerStyle = css({
   display: 'flex',

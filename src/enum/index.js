@@ -1,4 +1,4 @@
-const MBTI = [
+export const MBTI = [
   'INTJ',
   'INTP',
   'ENTJ',
@@ -15,4 +15,4 @@ const MBTI = [
   'INFJ',
   'INFP',
   'ENFP'
-]
+];

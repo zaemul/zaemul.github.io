@@ -1,7 +1,15 @@
 .App {
   text-align: center;
 }
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
 
+button:focus {
+  outline:0;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

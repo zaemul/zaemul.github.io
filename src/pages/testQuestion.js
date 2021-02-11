@@ -1,6 +1,6 @@
 import { Content, Header } from '../components';
 
-const Tteokbokki = () => {
+const TestQuestion = () => {
   return (
     <>
       <Header />
@@ -9,4 +9,4 @@ const Tteokbokki = () => {
   );
 };
 
-export default Tteokbokki;
+export default TestQuestion;

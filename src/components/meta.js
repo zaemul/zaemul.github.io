@@ -23,6 +23,8 @@ const Meta = () => {
       <meta property="twitter:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 떡볶이 취향 테스트"/>
       <meta property="twitter:image" content="https://dl.dropboxusercontent.com/s/n9pr74fbv6gdiub/main-header.png?dl=0"/>
       <meta property="twitter:image:alt" content="떡볶이 취향 테스트" />
+
+
     </Helmet>
   );
 }
