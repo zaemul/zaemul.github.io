@@ -1,6 +1,6 @@
-import { Button, Content, Header } from '../components';
-import { css } from '@emotion/react';
 import { useHistory } from 'react-router-dom';
+import { css } from '@emotion/react';
+import { Button, Content, Header } from '../components';
 import ShareButtons from '../components/share/ShareButtons';
 
 const containerStyle = css({

@@ -1,7 +1,7 @@
 import { Button, Header } from '../components';
 import { css } from '@emotion/react';
 import { useHistory } from 'react-router-dom';
-import ShareButtons from "../components/share/ShareButtons";
+import ShareButtons from '../components/share/ShareButtons';
 
 const containerStyle = css({
   position: 'relative',
@@ -15,7 +15,7 @@ const resultStyle = css({
   width: '100%'
 });
 
-const TestResult = () => {
+const TestResult = ({ type = '' }) => {
   const url = 'https://zaemul.github.io/test/tteokbokki/result';
   const history = useHistory();
 
@@ -32,7 +32,7 @@ const TestResult = () => {
       <Header />
       <div css={containerStyle}>
         <div css={resultStyle}>
-          <h1 css={{ marginBottom: 30 }}>Result</h1>
+          <h1 css={{ marginBottom: 30 }}>{type}</h1>
           <Button onClick={handleGoToMain}>다시하기</Button>
           <Button css={{ marginLeft: 30 }} onClick={handleGoToOtherTest}>다른 테스트 하기</Button>
           <ShareButtons url={url} />

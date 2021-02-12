@@ -16,8 +16,7 @@ const optionWrapperStyle = css({
 
 const optionStyle = css({
   display: 'block',
-  textAlign: 'center',
-  width: 300,
+  width: 350,
   padding: 10,
   margin: '20px auto',
   fontSize: 16,

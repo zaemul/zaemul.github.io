@@ -5,7 +5,7 @@ import CopyUrlButton from './CopyUrlButton';
 import { css } from '@emotion/react';
 
 const buttonGroupStyle = css({
-  marginTop: 80
+  marginTop: 50
 });
 
 const ShareButtons = ({ url }) => {
