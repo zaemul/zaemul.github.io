@@ -5,16 +5,17 @@ import CopyUrlButton from './CopyUrlButton';
 import { css } from '@emotion/react';
 
 const buttonGroupStyle = css({
-  marginTop: 50
+  marginTop: 30,
+  marginBottom: 30
 });
 
-const ShareButtons = ({ url }) => {
+const ShareButtons = ({ url, title, desc }) => {
   return (
     <>
       <div css={buttonGroupStyle}>
         <CopyUrlButton url={url} />
         <TwitterShareButton url={url} />
-        <KakaoShareButton url={url} />
+        <KakaoShareButton url={url} title={title} desc={desc} />
         <FacebookShareButton url={url} />
       </div>
     </>

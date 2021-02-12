@@ -1,23 +1,10 @@
-import { css } from '@emotion/react';
-import logo from '../assets/tteokbokki.png';
-
-const headerStyle = css({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: '#eee'
-});
-
-const logoStyle = css({
-  width: '100px',
-  height: '100px'
-});
-
 const Header = () => {
   return (
-    <header css={headerStyle}>
-      <img css={logoStyle} src={logo} alt='logo' />
-      <div>떡볶이 심리 테스트</div>
+    <header css={{ textAlign: 'center' }}>
+      <h1>떡볶이 심리 테스트</h1>
+      <div>
+        <h3>내 성향에 맞는 떡볶이는?</h3>
+      </div>
     </header>
   );
 };

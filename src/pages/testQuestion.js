@@ -1,18 +1,35 @@
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { css } from '@emotion/react';
 import { questions } from '../question';
 import { Button, Header, Question } from '../components';
 
-const contentStyle = css({
+const numberStyleWrapper = css({
   position: 'relative',
-  height: 300
+  top: -10,
+  display: 'inline-block',
+  color: '#d2363b',
+  padding: '0 0 10px 35px'
+});
+
+const numberStyle = css({
+  paddingBottom: 5,
+  borderBottom: '2px solid #DA4C4A'
+});
+
+const currentNumberStyle = css({
+  fontSize: 20
 });
 
 const TOTAL_STEP = 12;
 
 const TestQuestion = () => {
+  const { pathname } = useLocation();
   const history = useHistory();
+
+  const paths = pathname.split('/').filter(path => !!path);
+  const service = paths[0] || '';
+
   const [step, setStep] = useState(0);
   const [result, setResult] = useState([0, 0, 0, 0]);
 
@@ -48,19 +65,30 @@ const TestQuestion = () => {
   }
 
   const handleGoResult = (type) => {
-    history.push(`/tteokbokki/result/${type}`);
+    history.push(`/${service}/result/${type}`);
   };
+
+  const getStepLabel = (step) => {
+    return step < 10 ? `0${step}` : step;
+  }
 
   return (
     <>
-      <Header />
-      <div css={contentStyle}>
+      <div>
+        <div css={numberStyleWrapper}>
+          <div css={numberStyle}>
+            <span css={currentNumberStyle}>{getStepLabel(step+1)}</span>
+            <span css={{ opacity: 0.3 }}>/ {TOTAL_STEP}</span>
+          </div>
+        </div>
         {(step >= 0 && step < TOTAL_STEP) && (
           <Question question={questions[step]} handleSelect={handleSelect}/>
         )}
+        {/*
         <div css={{ textAlign: 'center' }}>
-          <Button onClick={handleGoResult}>결과보기</Button>
+          <Button onClick={() => handleGoResult('ISFP')}>결과보기</Button>
         </div>
+        */}
       </div>
     </>
   );

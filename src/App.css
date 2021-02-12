@@ -2,6 +2,7 @@
   text-align: center;
 }
 button {
+  font-family: "배달의민족 을지로체 TTF", "배달의민족을지로체TTF", "bm-euljiro";
   border: none;
   background: transparent;
   cursor: pointer;
@@ -9,6 +10,10 @@ button {
 
 button:focus {
   outline:0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
 }
 
 @media (prefers-reduced-motion: no-preference) {

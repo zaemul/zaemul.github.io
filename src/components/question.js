@@ -1,27 +1,29 @@
 import { css } from '@emotion/react';
+import { Button } from '../components';
 
 const containerStyle = css({
-  textAlign: 'center'
+  textAlign: 'center',
+  width: '80%',
+  margin: '60px auto 0 auto'
 });
 
 const titleStyle = css({
   fontSize: 20,
-  marginTop: 40,
-  fontWeight: 'bold'
+  color: '#C8403E'
 });
 
 const optionWrapperStyle = css({
-  marginTop: 40
+  marginTop: 33,
+  marginBottom: 100
 });
 
-const optionStyle = css({
+const optBtnStyle = css({
   display: 'block',
-  width: 350,
-  padding: 10,
+  width: 260,
+  minHeight: 80,
+  padding: '18px 30px',
   margin: '20px auto',
-  fontSize: 16,
-  border: '1px solid #ccc',
-  borderRadius: 10
+  fontSize: 20
 });
 
 const Question = ({ question, handleSelect }) => {
@@ -29,10 +31,10 @@ const Question = ({ question, handleSelect }) => {
 
   return (
     <div css={containerStyle}>
-      <div css={titleStyle}>{idx + 1}. {title}</div>
+      <div css={titleStyle}>{title}</div>
       <div css={optionWrapperStyle}>
-        <button css={optionStyle} onClick={() => handleSelect(0)}>{options[0]}</button>
-        <button css={optionStyle} onClick={() => handleSelect(1)}>{options[1]}</button>
+        <Button css={optBtnStyle} onClick={() => handleSelect(0)}>{options[0]}</Button>
+        <Button css={optBtnStyle} onClick={() => handleSelect(1)}>{options[1]}</Button>
       </div>
     </div>
   )

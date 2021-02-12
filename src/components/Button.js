@@ -1,13 +1,17 @@
 import { css } from '@emotion/react';
 
 const defaultBtnStyle = css({
+  width: 180,
+  minHeight: 60,
+  fontSize: 20,
   padding: '10px 15px',
   color: '#fff',
-  backgroundColor: '#194bdc',
-  borderRadius: 5,
-  border: '1px solid #194bdc',
+  backgroundColor: '#DA4C4A',
+  borderRadius: 40,
+  border: '2px solid #000',
+  whiteSpace: 'normal',
   '&:hover': {
-    backgroundColor: '#1745CA'
+    backgroundColor: '#B04140'
   }
 });
 
