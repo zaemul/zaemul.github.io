@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { css } from '@emotion/react';
 import { questions } from '../question';
-import { Button, Header, Question } from '../components';
+import { Question, TteokbokkiContainer } from '../components';
+import Analytics from '../analyze/Analytics';
 
 const numberStyleWrapper = css({
   position: 'relative',
@@ -33,7 +34,15 @@ const TestQuestion = () => {
   const [step, setStep] = useState(0);
   const [result, setResult] = useState([0, 0, 0, 0]);
 
-  const handleNext = () => setStep(step + 1);
+  const handleNext = () => {
+    Analytics.sendEvent({
+      category: 'Move question',
+      action: 'Go to next question',
+      label: 'Question page'
+    });
+
+    setStep(step + 1);
+  }
 
   const handleSelect = (ans) => {
     /* Record answer */
@@ -65,6 +74,11 @@ const TestQuestion = () => {
   }
 
   const handleGoResult = (type) => {
+    Analytics.sendEvent({
+      category: 'Move page',
+      action: 'Go to result page',
+      label: 'Question page'
+    });
     history.push(`/${service}/result/${type}`);
   };
 
@@ -73,7 +87,7 @@ const TestQuestion = () => {
   }
 
   return (
-    <>
+    <TteokbokkiContainer>
       <div>
         <div css={numberStyleWrapper}>
           <div css={numberStyle}>
@@ -84,13 +98,8 @@ const TestQuestion = () => {
         {(step >= 0 && step < TOTAL_STEP) && (
           <Question question={questions[step]} handleSelect={handleSelect}/>
         )}
-        {/*
-        <div css={{ textAlign: 'center' }}>
-          <Button onClick={() => handleGoResult('ISFP')}>결과보기</Button>
-        </div>
-        */}
       </div>
-    </>
+    </TteokbokkiContainer>
   );
 };
 

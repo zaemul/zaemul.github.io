@@ -10,7 +10,7 @@ const defaultBtnStyle = css({
   borderRadius: 40,
   border: '2px solid #000',
   whiteSpace: 'normal',
-  '&:hover': {
+  '&:active': {
     backgroundColor: '#B04140'
   }
 });

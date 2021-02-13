@@ -8,6 +8,10 @@ button {
   cursor: pointer;
 }
 
+button {
+  padding: 0;
+}
+
 button:focus {
   outline:0;
 }

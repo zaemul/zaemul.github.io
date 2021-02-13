@@ -1,24 +1,26 @@
-import KakaoShareButton from './KakaoShareButton';
-import FacebookShareButton from './FacebookShareButton';
-import TwitterShareButton from './TwitterShareButton';
-import CopyUrlButton from './CopyUrlButton';
+import {
+  KakaoShareButton,
+  FacebookShareButton,
+  TwitterShareButton,
+  CopyUrlButton,
+  SaveImageButton
+} from '../../components'
 import { css } from '@emotion/react';
 
 const buttonGroupStyle = css({
-  marginTop: 30,
+  marginTop: 20,
   marginBottom: 30
 });
 
-const ShareButtons = ({ url, title, desc }) => {
+const ShareButtons = ({ url, title, desc, useImageBtn = false }) => {
   return (
-    <>
-      <div css={buttonGroupStyle}>
-        <CopyUrlButton url={url} />
-        <TwitterShareButton url={url} />
-        <KakaoShareButton url={url} title={title} desc={desc} />
-        <FacebookShareButton url={url} />
-      </div>
-    </>
+    <div css={buttonGroupStyle}>
+      {useImageBtn && <SaveImageButton url={url} />}
+      <CopyUrlButton url={url} />
+      <KakaoShareButton url={url} title={title} desc={desc} />
+      <TwitterShareButton url={url} />
+      <FacebookShareButton url={url} />
+    </div>
   )
 };
 
