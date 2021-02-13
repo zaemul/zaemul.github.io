@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { useLocation, useHistory } from 'react-router-dom';
 import ScriptTag from 'react-script-tag';
-import { BASE_URL, MBTI_INFO } from '../enum';
+import { BASE_URL, MBTI, MBTI_INFO } from '../enum';
 import ArrowIcon from '../assets/arrow.png';
 import Analytics from '../analyze/Analytics';
 import { Button, ShareButtons, TteokbokkiContainer } from '../components';
@@ -126,10 +126,10 @@ const TestResult = ({ type = '' }) => {
       <ins
         className="kakao_ad_area"
         style={{ display: 'none', marginBottom: 10 }}
-        data-ad-unit="DAN-3umNJ81fMvTmKBjy"
+        data-ad-unit="DAN-G4uoaboBkgvyPtbu"
         data-ad-width="320"
         data-ad-height="100"
-      ></ins>
+      />
       <ScriptTag
         type="text/javascript"
         src="//t1.daumcdn.net/kas/static/ba.min.js"

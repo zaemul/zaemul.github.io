@@ -48,7 +48,7 @@ export const MBTI_INFO = {
     matchGoodWith: '',
   },
   INFJ: {
-    name: '딱 1인분, 추억의 학교앞 컵떡볶이',
+    name: '딱 1인분 추억의 학교앞 컵떡볶이',
     desc: '선의의 옹호자',
     good: ['ESTP', 'ESFP'],
     bad: ['ESTJ', 'ISTJ'],
@@ -87,13 +87,13 @@ export const MBTI_INFO = {
     matchGoodWith: '',
   },
   ISTP: {
-    name: '추억의 학교앞 컵떡볶이', // FIXME
+    name: '떡보다 고기가 많은 차돌박이 떡볶이',
     desc: '만능 재주꾼',
     good: ['ENFJ', 'ESFJ'],
     bad: ['ENFP', 'INFP'],
     percentage: 9,
-    imgUrl: 'https://images2.imgbox.com/37/04/PLY7tJIP_o.png', // FIXME
-    iconUrl: 'https://images2.imgbox.com/bb/85/HCtnWcCy_o.png', // FIXME
+    imgUrl: 'https://images2.imgbox.com/37/04/PLY7tJIP_o.png',
+    iconUrl: 'https://images2.imgbox.com/ab/83/Otu5ghr9_o.png',
     personality:
       '조용하고 말이 없으며 논리적이고 분석적이고 객관적으로 인생을 관찰하는 유형입니다. 사실적인 정보를 조직하기 좋아하는 반면 일과 관계 되지 않는 이상 자신을 개방하지 않는 편입니다.  그래서 가까운 친구들 외에는 대체로 사람들과 사귀지 않는 편입니다. 일상생활에 있어 매우 적응력이 강합니다.',
     careful: '',
@@ -113,13 +113,13 @@ export const MBTI_INFO = {
     matchGoodWith: '',
   },
   ISFP: {
-    name: '추억의 학교앞 컵떡볶이', // FIXME
+    name: '남들이 떡볶이를 외쳐도 떡꼬치',
     desc: '호기심 예술가',
     good: ['ENTJ', 'ESTJ'],
     bad: ['ENTP', 'INTP'],
     percentage: 7,
-    imgUrl: 'https://images2.imgbox.com/37/04/PLY7tJIP_o.png', // FIXME
-    iconUrl: 'https://images2.imgbox.com/bb/85/HCtnWcCy_o.png', // FIXME
+    imgUrl: 'https://images2.imgbox.com/6a/81/izcs7YCD_o.png',
+    iconUrl: 'https://images2.imgbox.com/ee/9d/coLDL3Xf_o.png',
     personality:
       '말보다는 행동으로 따뜻함을 나타내며, 마음이 따뜻하고 동정적입니다. 마치 양털안감을 넣은 오버코트처럼 속마음이 따뜻한 사람들입니다. 그러나 상대방을 잘 알게 될 때까지 이 따뜻함을 잘 드러내지 않는 경향이 있습니다.',
     careful: '',
@@ -152,26 +152,26 @@ export const MBTI_INFO = {
     matchGoodWith: '',
   },
   ENFJ: {
-    name: '추억의 학교앞 컵떡볶이', // FIXME
+    name: '지중해식 랍스타 떡볶이',
     desc: '정의로운 사회운동가',
     good: ['ISTP', 'INTP'],
     bad: ['ISTJ', 'ESTJ'],
     percentage: 1,
-    imgUrl: 'https://images2.imgbox.com/37/04/PLY7tJIP_o.png', // FIXME
-    iconUrl: 'https://images2.imgbox.com/bb/85/HCtnWcCy_o.png', // FIXME
+    imgUrl: 'https://images2.imgbox.com/8a/86/X15okjUe_o.png',
+    iconUrl: 'https://images2.imgbox.com/27/f4/5qPs1brr_o.png',
     personality:
       '동정심과 동료애가 많으며, 친절하고 재치 있습니다. 민첩하고 참을성이 많고 성실합니다. 사람들과의 인화를 중요시 여기며, 다른 사람들의 의견을 존중하고 그 가치를 봅니다. 공동의 선(善)을 위해서는 대체로 상대방 의견에 동의하는 경향이 있습니다. 새로운 아이디어에 대한 호기심이 많습니다. 쓰기 보다는 말로써 생각을 잘 표현합니다. 편안하고 능란하게 계획을 제시하거나 조직을 이끌어 가는 능력이 있습니다.',
     careful: '',
     matchGoodWith: '',
   },
   ENFP: {
-    name: '추억의 학교앞 컵떡볶이', // FIXME
+    name: '떡볶이는 거들뿐 치맥 떡볶이',
     desc: '재기발랄한 활동가',
     good: ['ISTJ', 'ISFJ'],
     bad: ['ISTP', 'ESTP'],
     percentage: 4,
-    imgUrl: 'https://images2.imgbox.com/37/04/PLY7tJIP_o.png', // FIXME
-    iconUrl: 'https://images2.imgbox.com/bb/85/HCtnWcCy_o.png', // FIXME
+    imgUrl: 'https://images2.imgbox.com/4c/09/7SqprLgo_o.png',
+    iconUrl: 'https://images2.imgbox.com/76/f4/ak84kQS8_o.png',
     personality:
       '풍부한 상상력과 영감을 가지고 새로운 프로젝트를 잘 시작합니다. 풍부한 충동적 에너지를 가지고 즉흥적으로 일을 재빠르게 해결하는 솔선수범력과 상상력이 있습니다. 관심이 있는 일이면 무엇이든 척척 해내는 열성파입니다. 뛰어난 통찰력으로 그 사람 안에 있는 성장 발전할 가능성을 들여다봅니다. 또한 자신의 열성으로 다른 사람들도 어떤 프로젝트에 흥미를 가지게 하고 다른 사람을 잘 도와줍니다.',
     careful: '',
@@ -191,20 +191,20 @@ export const MBTI_INFO = {
     matchGoodWith: '',
   },
   ESTP: {
-    name: '추억의 학교앞 컵떡볶이', // FIXME
+    name: '새콤달콤 과즙팡팡 과일떡볶이',
     desc: '모험 즐기는 사업가',
     good: ['INFJ', 'INTJ'],
     bad: ['INFP', 'ENFP'],
     percentage: 6,
-    imgUrl: 'https://images2.imgbox.com/37/04/PLY7tJIP_o.png', // FIXME
-    iconUrl: 'https://images2.imgbox.com/bb/85/HCtnWcCy_o.png', // FIXME
+    imgUrl: 'https://images2.imgbox.com/4d/f0/PV4IFaIA_o.png',
+    iconUrl: 'https://images2.imgbox.com/e1/81/YNkbBYlC_o.png',
     personality:
       '관대하고 느긋하며 어떤 사람이나 사건에 대해서 별로 선입관을 갖지 않으며 개방적입니다. 자신에게나 타인에게 있어 관용적이며, 일을 있는 그대로 보고 받아들입니다. 그래서 갈등이나 긴장이 일어나는 상황을 잘 무마하는 능력이 있습니다. ‘꼭 이렇게 되어야 하고, 저렇게 되어야 된다.’라는 규범을 적용하기보다 누구나 만족할 수 있는 해결책을 모색합니다. 또한 타협하고 적응하는 능력이 있습니다. 주의집중을 현재 상황에 맞추고, 현실을 있는 그대로 보는 이 유형의 자연스러운 경향으로 인해 현실적으로 야기되는 문제 해결에 뛰어난 능력을 발휘하기도 합니다.',
     careful: '',
     matchGoodWith: '',
   },
   ESFJ: {
-    name: '다 드루와 토핑가득 김치치즈떡볶이피자',
+    name: '토핑가득 김치치즈떡볶이피자',
     desc: '사교적인 외교관',
     good: ['INTP', 'ISTP'],
     bad: ['INTJ', 'ENTJ'],
@@ -217,13 +217,13 @@ export const MBTI_INFO = {
     matchGoodWith: '',
   },
   ESFP: {
-    name: '추억의 학교앞 컵떡볶이', // FIXME
+    name: '그때그때 달라요 냉털 떡볶이',
     desc: '자유로운 연예인',
     good: ['INTJ', 'INFJ'],
     bad: ['INTP', 'ENTP'],
     percentage: 5,
-    imgUrl: 'https://images2.imgbox.com/37/04/PLY7tJIP_o.png', // FIXME
-    iconUrl: 'https://images2.imgbox.com/bb/85/HCtnWcCy_o.png', // FIXME
+    imgUrl: 'https://images2.imgbox.com/58/4e/4M8w8Qf7_o.png',
+    iconUrl: 'https://images2.imgbox.com/f9/35/sbMMq2x0_o.png',
     personality:
       '친절하고 수용적이며 현실적이고 실제적입니다. 어떤 상황에도 잘 적응하며 타협적입니다. 선입견이 별로 없으며 개방적이고 관용적이며 대체로 사람들을 잘 받아들입니다. 주위에서 진행되고 있는 일들을 알고자 하고 또한 열심히 참견하고 끼어들곤 합니다. 다른 사람의 일이나 활동에 관심이 많으며 새로운 사건 혹은 물건에도 관심과 호기심이 많기 때문입니다. 이론이나 책을 통해 배우기보다 경험 등의 실생활을 통해 배우는 것을 선호합니다.',
     careful: '',

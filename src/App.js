@@ -21,15 +21,15 @@ const App = () => {
       <ins
         className="kakao_ad_area"
         style={{ display: 'none', marginBottom: 10 }}
-        data-ad-unit="DAN-7n5IxE69Ihln4ayw"
+        data-ad-unit="DAN-xE7Cmclmill5YLGg"
         data-ad-width="320"
         data-ad-height="100"
-      ></ins>
+      />
       <ScriptTag
         type="text/javascript"
         src="//t1.daumcdn.net/kas/static/ba.min.js"
         async
-      ></ScriptTag>
+      />
 
       <BrowserRouter basename="/">
         <ScrollToTop>
