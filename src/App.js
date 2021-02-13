@@ -31,7 +31,7 @@ const App = () => {
         async
       ></ScriptTag>
 
-      <BrowserRouter basename="/test/">
+      <BrowserRouter basename="/">
         <ScrollToTop>
           <Routes />
         </ScrollToTop>
