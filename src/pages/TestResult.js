@@ -2,10 +2,10 @@ import { css } from '@emotion/react';
 import { useLocation, useHistory } from 'react-router-dom';
 import ScriptTag from 'react-script-tag';
 import { BASE_URL, MBTI_INFO } from '../enum';
-import ResultImage from '../assets/infj.png';
 import ArrowIcon from '../assets/arrow.png';
 import Analytics from '../analyze/Analytics';
 import { Button, ShareButtons, TteokbokkiContainer } from '../components';
+import DefaultLogo from '../assets/tteokbokki.png';
 
 const resultImageStyle = css({
   position: 'relative',
@@ -22,6 +22,7 @@ const descStyle = css({
   fontFamily: 'Roboto',
   fontSize: 12,
   marginBottom: 42,
+  whiteSpace: 'pre-line',
 });
 
 const combiBoxStyle = css({
@@ -36,12 +37,23 @@ const combiContentStyle = css({
 
 const combiStyle = css({
   display: 'inline-block',
-  width: '45%',
+  width: '47%',
   height: 130,
   border: '2px solid #d2363b',
   color: '#C8403E',
   textAlign: 'center',
   fontSize: 15,
+});
+
+const percentStyle = css({
+  display: 'flex',
+  width: '80%',
+  margin: '35px auto 10px auto',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: 35,
+  color: '#fff',
+  backgroundColor: '#DA4C4A',
 });
 
 const combiTitleStyle = css({
@@ -127,10 +139,8 @@ const TestResult = ({ type = '' }) => {
       <TteokbokkiContainer useIcon={false}>
         <div css={{ width: '80%', margin: '40px auto 0 auto' }}>
           <h4 css={titleStyle}>당신의 성격</h4>
-          <div css={descStyle}>
-            어쩌구 저쩌구 블라블라 어쩌구 저쩌구 블라블라 어쩌구 저쩌구 블라블라
-            어쩌구 저쩌구 블라블라 어쩌구 저쩌구 블라블라
-          </div>
+          <div css={descStyle}>{resultObj.personality}</div>
+          {/*
           <h4 css={titleStyle}>조심하세요</h4>
           <div css={descStyle}>
             어쩌구 저쩌구 블라블라 어쩌구 저쩌구 블라블라 어쩌구 저쩌구 블라블라
@@ -141,19 +151,26 @@ const TestResult = ({ type = '' }) => {
             어쩌구 저쩌구 블라블라 어쩌구 저쩌구 블라블라 어쩌구 저쩌구 블라블라
             어쩌구 저쩌구 블라블라 어쩌구 저쩌구 블라블라
           </div>
+          */}
         </div>
+
+        <div css={percentStyle}>천만명 중 당신과 같은 사람 {percentage}%</div>
 
         <div css={[{ width: '80%' }, combiBoxStyle]}>
           <div css={combiStyle}>
             <div css={combiTitleStyle}>최고의 궁합 떡볶이</div>
-            <img src={goodObj.iconUrl} css={combiContentStyle} />
-            {/*<div css={{ marginTop: 30 }}>{goodObj.imgUrl}</div>*/}
+            <img
+              src={goodObj.iconUrl ? goodObj.iconUrl : DefaultLogo}
+              css={combiContentStyle}
+            />
             <div css={combiDescStyle}>{goodObj.name}</div>
           </div>
           <div css={combiStyle}>
             <div css={combiTitleStyle}>최악의 궁합 떡볶이</div>
-            <img src={badObj.iconUrl} css={combiContentStyle} />
-            {/*<div css={{ marginTop: 30 }}>{badObj.imgUrl}</div>*/}
+            <img
+              src={badObj.iconUrl ? badObj.iconUrl : DefaultLogo}
+              css={combiContentStyle}
+            />
             <div css={combiDescStyle}>{badObj.name}</div>
           </div>
         </div>
