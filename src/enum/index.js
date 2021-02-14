@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://zaemul.github.io/test';
+export const BASE_URL = 'https://ddangkong.me';
 
 export const MBTI = [
   'INTJ',

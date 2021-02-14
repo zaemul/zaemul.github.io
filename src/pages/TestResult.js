@@ -183,8 +183,9 @@ const TestResult = ({ type = '' }) => {
       <div css={{ textAlign: 'center', margin: '0 auto' }}>
         <ShareButtons
           url={url}
-          title={`당신의 타입은 ${type}`}
-          desc={`${type}에 대한 설명~`}
+          imgUrl={resultObj.imgUrl}
+          title={`당신은 ${resultObj.name}`}
+          desc={'내가 무슨 떡볶이인지 궁금하다면?'}
         />
         <Button
           css={[{ marginTop: 10, marginBottom: 20 }, restartBtnStyle]}

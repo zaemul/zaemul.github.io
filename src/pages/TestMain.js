@@ -80,11 +80,6 @@ const TestMain = () => {
             />
           </Button>
         </div>
-        {/*
-        <div>
-          <Button onClick={handleGoToOtherTest}>다른 테스트 하기</Button>
-        </div>
-        */}
         <ShareButtons
           url={url}
           title={'떡볶이 심리테스트'}

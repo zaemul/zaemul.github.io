@@ -13,7 +13,7 @@ const Meta = () => {
       <link rel="main-url" href={window.location.href} />
 
       {/* <!-- Open Graph / Facebook --> */}
-      <meta property="og:url" content="https://zaemul.github.io/test" />
+      <meta property="og:url" content="https://ddangkong.me" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="떡볶이 취향 테스트" />
       <meta
@@ -28,7 +28,7 @@ const Meta = () => {
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://zaemul.github.io/test" />
+      <meta property="twitter:url" content="https://ddangkong.me" />
       <meta property="twitter:title" content="떡볶이 취향 테스트" />
       <meta
         property="twitter:description"

@@ -23,7 +23,7 @@
     "build": "craco build",
     "eject": "craco eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "./setDomain.sh && gh-pages -d build"
   },
   "prettier": {
     "singleQuote": true,

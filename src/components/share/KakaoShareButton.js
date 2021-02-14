@@ -10,32 +10,40 @@ const imgStyle = css({
   marginLeft: 4,
 });
 
-const buttonObj = (url, title, desc) => {
+const buttonObj = (url, imgUrl, title, desc) => {
+  const buttons = url.includes('result')
+    ? [
+        {
+          title: '결과보기',
+          link: { mobileWebUrl: url, webUrl: url },
+        },
+        {
+          title: '테스트하기',
+          link: { mobileWebUrl: BASE_URL, webUrl: BASE_URL },
+        },
+      ]
+    : [
+        {
+          title: '테스트하기',
+          link: { mobileWebUrl: BASE_URL, webUrl: BASE_URL },
+        },
+      ];
   return {
     objectType: 'feed',
     content: {
       title,
       description: desc,
-      imageUrl:
-        'https://lh3.googleusercontent.com/proxy/G8OQOogC48SUUFL2yNJjMsMezkh4QR8hkuAZvmxWL3v9l5u0vhDPKu4dEaNdYgXQBTeMOwksgmEfI2tgtSG4hybMB4nwez7sj6NtU5G5',
+      imageUrl: imgUrl,
       link: {
-        mobileWebUrl: BASE_URL,
-        webUrl: BASE_URL,
+        mobileWebUrl: url,
+        webUrl: url,
       },
     },
-    buttons: [
-      {
-        title: '테스트 하러가기',
-        link: {
-          mobileWebUrl: url,
-          webUrl: url,
-        },
-      },
-    ],
+    buttons,
   };
 };
 
-const KakaoShareButton = ({ url, title, desc }) => {
+const KakaoShareButton = ({ url, imgUrl, title, desc }) => {
   const sendMessage = () => {
     Analytics.sendEvent({
       category: 'Share',
@@ -47,7 +55,7 @@ const KakaoShareButton = ({ url, title, desc }) => {
       if (!kakao.isInitialized()) {
         kakao.init('44567fe04f717ac081149b09264ae84e');
       }
-      kakao.Link.sendDefault(buttonObj(url, title, desc));
+      kakao.Link.sendDefault(buttonObj(url, imgUrl, title, desc));
     }
   };
   return (
