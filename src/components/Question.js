@@ -4,7 +4,7 @@ import { Button } from '../components';
 const containerStyle = css({
   textAlign: 'center',
   width: '80%',
-  margin: '60px auto 0 auto',
+  margin: '40px auto 0 auto',
 });
 
 const titleStyle = css({
@@ -15,7 +15,7 @@ const titleStyle = css({
 
 const optionWrapperStyle = css({
   marginTop: 33,
-  marginBottom: 100,
+  marginBottom: 95,
 });
 
 const optBtnStyle = css({
@@ -24,7 +24,7 @@ const optBtnStyle = css({
   width: 260,
   minHeight: 80,
   padding: '18px 30px',
-  margin: '20px auto',
+  margin: '15px auto',
   fontSize: 20,
 });
 

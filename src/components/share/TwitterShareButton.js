@@ -12,8 +12,8 @@ const imgStyle = css({
 const TwitterShareButton = ({ url }) => {
   const twitterDataObj = {
     baseUrl: 'http://twitter.com/share',
-    text: '떡볶이 심리테스트',
-    hashTags: 'test,mbti,떡볶이',
+    text: '떡볶이 테스트',
+    hashTags: 'test,mbti,떡볶이,심리테스트',
   };
 
   const { baseUrl, text, hashTags } = twitterDataObj;

@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Main from '../pages/Main';
 import TestMain from '../pages/TestMain';
 import TestQuestion from '../pages/TestQuestion';
@@ -10,9 +10,7 @@ const Routes = () => {
   GoogleAnalytics();
   return (
     <Switch>
-      <Route exact path="/">
-        <Redirect to={'/tteokbokki/main'}></Redirect>
-      </Route>
+      <Route exact path="/" component={Main}></Route>
       {/* 떡볶이 테스트 */}
       <Route exact path="/tteokbokki/main" component={TestMain}></Route>
       <Route exact path="/tteokbokki/question" component={TestQuestion}></Route>
