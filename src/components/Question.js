@@ -35,11 +35,17 @@ const Question = ({ question, handleSelect }) => {
     <div css={containerStyle}>
       <div css={titleStyle}>{title}</div>
       <div css={optionWrapperStyle}>
-        <Button css={optBtnStyle} onClick={() => handleSelect(0)}>
-          {options[0]}
+        <Button
+          css={optBtnStyle}
+          onClick={() => handleSelect(options[0].point)}
+        >
+          {options[0].content}
         </Button>
-        <Button css={optBtnStyle} onClick={() => handleSelect(1)}>
-          {options[1]}
+        <Button
+          css={optBtnStyle}
+          onClick={() => handleSelect(options[1].point)}
+        >
+          {options[1].content}
         </Button>
       </div>
     </div>

@@ -44,7 +44,7 @@ export const MBTI_INFO = {
     worst: 'ESFP',
     percentage: 3,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/intp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/intj_icon.png`,
+    iconUrl: `${S3_IMAGE_URL_PREFIX}/intp_icon.png`,
     personality:
       '논리와 분석으로 문제를 해결하기 좋아하는 당신! 먼저 대화를 시작하지는 않지만, 관심이 있는 분야에 있어서는 누구보다도 수다쟁이! 이해가 빠르고 지적 호기심이 많아, 분석적이고 논리적이며 객관적이에요. 아이디어와 원리, 인과관계에 관심이 많지만 게으른 천재에요. \n' +
       '어려운 문제를 해결하고 답을 찾는 걸 좋아하지만 막상 그 해결책을 적용하는 것에는 관심이 없군요. 주어진 것을 그대로 수행하기보다는 즉흥적 활동을 통하여 자기 역량을 효과적으로  발휘하는데 뛰어나요. 사회적 통념을 거부하고 독창성이 넘치는 당신은 민트초코떡볶이!',
@@ -58,7 +58,7 @@ export const MBTI_INFO = {
     worst: 'ESTJ',
     percentage: 2,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/infj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/intj_icon.png`,
+    iconUrl: `${S3_IMAGE_URL_PREFIX}/infj_icon.png`,
     personality:
       '독창성과 내적 독립심이 강하고 확고한 신념을 가지고 있는 당신은 컴떡볶이 같은 사람! 목적이 생기면 그곳에만 몰두해서 주변에 소홀하기도 해요. 풍부하고 감성적인 내면을 가지고 있어요. 일반적으로는 말이 없는 것 같지만 친한 친구나 지인 앞에서는 미래에 대한 각종 예측과 상상을 이야기해요. 친해지고 나면 첫인상과 매우 다른 경우가 많아요.',
     careful:
@@ -71,7 +71,7 @@ export const MBTI_INFO = {
     worst: 'ESTP',
     percentage: 3,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/infp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/intj_icon.png`,
+    iconUrl: `${S3_IMAGE_URL_PREFIX}/infp_icon.png`,
     personality:
       '정열적이고 낭만적이며 내적 신념이 깊은 당신! 마음이 따뜻하고 조용하며 자신과 관계있는 일이나 사람에 대하여 책임감이 강하고 성실해요. 이해심이 많고 관대하고 자신이 지향하는 이상에 대하여 정열적인 신념을 가졌어요. 남을 지배하거나, 주변 사람들과 경쟁하려고 하는 경향이 없어요. 노동의 대가를 넘어서 자신이 하는 일에 의미를 찾고자해요. 인간 이해와 인간 복지에 기여할 수 있는 일을 하기를 원한다. 떡볶이를 먹더라도 소신있게 비건떡볶이를 외칠 수 있는 당신입니다',
     careful:
