@@ -5,6 +5,12 @@ import { Meta, ScrollToTop } from './components';
 import ScriptTag from 'react-script-tag';
 import '@kfonts/bm-euljiro';
 import Routes from './router';
+const backgroundStyle = (color = '#dfcdae') => {
+  return css({
+    backgroundColor: color,
+    paddingBottom: 20,
+  });
+};
 
 const containerStyle = css({
   margin: '0 auto',
@@ -14,28 +20,30 @@ const containerStyle = css({
 
 const App = () => {
   return (
-    <div css={containerStyle}>
-      <Meta />
+    <div css={backgroundStyle('#dfcdae')}>
+      <div css={containerStyle}>
+        <Meta />
 
-      {/* Kakao Adfit Header */}
-      <ins
-        className="kakao_ad_area"
-        style={{ display: 'none', marginBottom: 10 }}
-        data-ad-unit="DAN-xE7Cmclmill5YLGg"
-        data-ad-width="320"
-        data-ad-height="100"
-      />
-      <ScriptTag
-        type="text/javascript"
-        src="//t1.daumcdn.net/kas/static/ba.min.js"
-        async
-      />
+        {/* Kakao Adfit Header */}
+        <ins
+          className="kakao_ad_area"
+          style={{ display: 'none', marginBottom: 10 }}
+          data-ad-unit="DAN-xE7Cmclmill5YLGg"
+          data-ad-width="320"
+          data-ad-height="100"
+        />
+        <ScriptTag
+          type="text/javascript"
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+          async
+        />
 
-      <BrowserRouter basename="/">
-        <ScrollToTop>
-          <Routes />
-        </ScrollToTop>
-      </BrowserRouter>
+        <BrowserRouter basename="/">
+          <ScrollToTop>
+            <Routes />
+          </ScrollToTop>
+        </BrowserRouter>
+      </div>
     </div>
   );
 };
