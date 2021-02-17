@@ -2,7 +2,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 import { css } from '@emotion/react';
 import { Button, TteokbokkiContainer, ShareButtons } from '../components';
 import { BASE_URL } from '../enum';
-import Logo from '../assets/tteokbokki.png';
+import Logo from '../assets/tteokbokki/tteokbokki.png';
 import ArrowIcon from '../assets/arrow.png';
 import MadeByIcon from '../assets/made_by.png';
 import Analytics from '../analyze/Analytics';

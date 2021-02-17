@@ -1,3 +1,20 @@
+import enfj_icon from '../assets/tteokbokki/enfj_icon.png';
+import enfp_icon from '../assets/tteokbokki/enfp_icon.png';
+import entj_icon from '../assets/tteokbokki/entj_icon.png';
+import entp_icon from '../assets/tteokbokki/entp_icon.png';
+import esfj_icon from '../assets/tteokbokki/esfj_icon.png';
+import esfp_icon from '../assets/tteokbokki/esfp_icon.png';
+import estj_icon from '../assets/tteokbokki/estj_icon.png';
+import estp_icon from '../assets/tteokbokki/estp_icon.png';
+import infj_icon from '../assets/tteokbokki/infj_icon.png';
+import infp_icon from '../assets/tteokbokki/infp_icon.png';
+import intj_icon from '../assets/tteokbokki/intj_icon.png';
+import intp_icon from '../assets/tteokbokki/intp_icon.png';
+import isfj_icon from '../assets/tteokbokki/isfj_icon.png';
+import isfp_icon from '../assets/tteokbokki/isfp_icon.png';
+import istj_icon from '../assets/tteokbokki/istj_icon.png';
+import istp_icon from '../assets/tteokbokki/istp_icon.png';
+
 export const BASE_URL = 'https://ddangkong.me';
 export const S3_IMAGE_URL_PREFIX =
   'https://tteokbokki.s3.ap-northeast-2.amazonaws.com';
@@ -30,7 +47,7 @@ export const MBTI_INFO = {
     worst: 'ESFJ',
     percentage: 4,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/intj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/intj_icon.png`,
+    icon: intj_icon,
     personality:
       '논리적이고 객관적이며 이상적일 만큼 이론적인 당신! 어떤 것이든 신중히 분석하고 숨은 이면의 의미를 생각해 보려는 경향이 있어요. 다른 사람에게는 없는 미래에 대한 혁신적인 통찰력이 있어요. \n' +
       '지식을 축적하기보다, 기존에 알고 있던 것들을 다양한 관점으로 합성시키는 유형으로 큰 틀을 지정해놓고 상세화하는 것에 뛰어나요! 한마디로 나무보다 숲을 보는 사람입니다. 남들에게는 김치, 아보카도 낯선 재료지만 겉의 조화를 찾을 수 있어요',
@@ -44,7 +61,7 @@ export const MBTI_INFO = {
     worst: 'ESFP',
     percentage: 3,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/intp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/intp_icon.png`,
+    icon: intp_icon,
     personality:
       '논리와 분석으로 문제를 해결하기 좋아하는 당신! 먼저 대화를 시작하지는 않지만, 관심이 있는 분야에 있어서는 누구보다도 수다쟁이! 이해가 빠르고 지적 호기심이 많아, 분석적이고 논리적이며 객관적이에요. 아이디어와 원리, 인과관계에 관심이 많지만 게으른 천재에요. \n' +
       '어려운 문제를 해결하고 답을 찾는 걸 좋아하지만 막상 그 해결책을 적용하는 것에는 관심이 없군요. 주어진 것을 그대로 수행하기보다는 즉흥적 활동을 통하여 자기 역량을 효과적으로  발휘하는데 뛰어나요. 사회적 통념을 거부하고 독창성이 넘치는 당신은 민트초코떡볶이!',
@@ -58,7 +75,7 @@ export const MBTI_INFO = {
     worst: 'ESTJ',
     percentage: 2,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/infj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/infj_icon.png`,
+    icon: infj_icon,
     personality:
       '독창성과 내적 독립심이 강하고 확고한 신념을 가지고 있는 당신은 컴떡볶이 같은 사람! 목적이 생기면 그곳에만 몰두해서 주변에 소홀하기도 해요. 풍부하고 감성적인 내면을 가지고 있어요. 일반적으로는 말이 없는 것 같지만 친한 친구나 지인 앞에서는 미래에 대한 각종 예측과 상상을 이야기해요. 친해지고 나면 첫인상과 매우 다른 경우가 많아요.',
     careful:
@@ -71,7 +88,7 @@ export const MBTI_INFO = {
     worst: 'ESTP',
     percentage: 3,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/infp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/infp_icon.png`,
+    icon: infp_icon,
     personality:
       '정열적이고 낭만적이며 내적 신념이 깊은 당신! 마음이 따뜻하고 조용하며 자신과 관계있는 일이나 사람에 대하여 책임감이 강하고 성실해요. 이해심이 많고 관대하고 자신이 지향하는 이상에 대하여 정열적인 신념을 가졌어요. 남을 지배하거나, 주변 사람들과 경쟁하려고 하는 경향이 없어요. 노동의 대가를 넘어서 자신이 하는 일에 의미를 찾고자해요. 인간 이해와 인간 복지에 기여할 수 있는 일을 하기를 원한다. 떡볶이를 먹더라도 소신있게 비건떡볶이를 외칠 수 있는 당신입니다',
     careful:
@@ -85,7 +102,7 @@ export const MBTI_INFO = {
     worst: 'ENFJ',
     percentage: 25,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/istj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/istj_icon.png`,
+    icon: istj_icon,
     personality:
       '다소 내향적이지만 틀에 짜여진 주어진 임무를 철저하게 완수하려고 노력하는 당신!  규칙을 잘 준수하는 당신은 회사나 공공기관 근무가 잘 맞아요. 학교 선생님들이 매우 좋아하는 유형이에요. 겉으로 튀는 것을 별로 안 좋아하고 용의단정하며 정돈된 스타일을 추구해요. 사실에 근거한 것들을 좋아하며 결정사항에 의심을 하지 않는 당신은 계량을 딱딱 지키는 프렌차이즈 떡볶이 같은 사람!',
     careful:
@@ -98,7 +115,7 @@ export const MBTI_INFO = {
     worst: 'ENFP',
     percentage: 9,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/istp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/istp_icon.png`,
+    icon: istp_icon,
     personality:
       '조용하고 과묵하며 절제된 호기심을 가지고 있는 차돌박이 떡볶이 같은 당신! 사람을 관찰하고, 상황을 잘 파악하며 도구를 다루는데 탁월해요. 말이 없으며, 객관적으로 인생을 관찰하는 유형이에요. 필요 이상으로 자신을 내세우지 않고, 일과 관계되지 않는이상 어떤 상황이나 인간관계에 직접 뛰어들지 않아요. 가능한 에너지 소비를 하지 않으려고 해요. \n' +
       '사실적 자료를 정리, 조직하기를 좋아하는 경향이 있으며 인과관계나 객관적 원리에 관심이 많아요. 민첩하게 상황을 파악하는 것도 뛰어납니다!',
@@ -113,7 +130,7 @@ export const MBTI_INFO = {
     worst: 'ENTJ',
     percentage: 8,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/isfj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/isfj_icon.png`,
+    icon: isfj_icon,
     personality:
       '조용하고 차분하며 정이 많은 당신은 마치 엄마가 만든 떡볶이처럼 친근해요. 책임감과 인내심도 강하고, 본인이 좋아하는 사람에 대해서는 누구보다도 충성심과 애정이 가득해요. 언제다 진솔하고 가볍지 않기 때문에, 관계를 맺기에 가장 믿음직스러운 유형입니다',
     careful:
@@ -127,7 +144,7 @@ export const MBTI_INFO = {
     worst: 'ENTP',
     percentage: 7,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/isfp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/isfp_icon.png`,
+    icon: isfp_icon,
     personality:
       '말없이 다정하고 친절하고 겸손하지만 상대방을 잘 알게 될 때까지 따뜻함을 잘 드러내지 않아요. 차가워 보일 수도 있지만  알고보면 가장 겸손하고 따뜻한 사람이에요. 자신의 의견이나 가치를 타인에게 강요하지 않으며 의견 충볼을 피해요. \n' +
       '새로운 것을 찾아 시도하는 것을 좋아하고, 언제든 도전할 의지가 있어요. 그점이 남들에게 새로워 보일 수 있는 당신은 떡꼬치같은 사람이에요!',
@@ -142,7 +159,7 @@ export const MBTI_INFO = {
     worst: 'ISFJ',
     percentage: 2,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/entj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/entj_icon.png`,
+    icon: entj_icon,
     personality:
       '열정적이고 솔직하고 단호한 당신! 활동적이고 장기적인 계획이 있어서 좋은 지도자가 될 수 있어요. 지적인 자극을 주는 새로운 아이디어에 관심이 많아요. 일 처리에 있어 사전 준비도 철저하고, 계획적이고 체계적으로 추진해 나가는 당신! 그렇다고 권위적이지도 않고 아랫사람들과도 의논을 잘해요. 리더형의 당신은 궁중떡볶이!',
     careful:
@@ -155,7 +172,7 @@ export const MBTI_INFO = {
     worst: 'ISFP',
     percentage: 2,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/entp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/entp_icon.png`,
+    icon: entp_icon,
     personality:
       '박식하고 독창적이며 창의력이 풍부한 당신! 안목이 넓고 다방면에 관심과 재능이 많군요. 풍부한 상상력과 새로운 일을 시도하면서, 논리력도 있어요. 새로운 문제나 복잡한 문제에 해결 능력이 뛰어나서 사람들이 많이 찾아요. 관심을 갖고 있는 분야에서는 엄청난 능력을 보이지만, 새로운 도전이 없는 일상적인 일에는 흥미를 가지지 못해요. 그냥 떡볶이 보다는 색다른 까르보나라 같은 매력적인 타입입니다',
     careful:
@@ -168,7 +185,7 @@ export const MBTI_INFO = {
     worst: 'ISTJ',
     percentage: 1,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/enfj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/enfj_icon.png`,
+    icon: enfj_icon,
     personality:
       '따뜻하고 책임감이 강하며 사교성이 풍부한 당신! 동정심이 많고 이타적인 당신은 누구에게나 좋은 사람이에요. 다른 사람들의 생각이나 의견에 관심이 많고, 공동을 위해 다른 사람의 의견에 대체로 동의해요. 현재보다는 미래의 가능성을 추구하며 편안하게 집단을 이끌어가는 능력이 있는 당신은 인기많은 지중해식 랍스타 떡볶이 타입! 때로는 다른 사람들의 좋은 점을 지나치게 이상화해서 다른 사람들도 자기와 같을 것이라고 생각하는 경향이 있어요.',
     careful:
@@ -181,7 +198,7 @@ export const MBTI_INFO = {
     worst: 'ISTP',
     percentage: 4,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/enfp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/enfp_icon.png`,
+    icon: enfp_icon,
     personality:
       '따뜻하고 정열적이고 활기가 넘치는 당신은 치맥 떡볶이! 재능도 많고 상상력도 풍부하고 창의적인 다재다능한 사람이에요. 항상 새로운 가능성을 찾고 시도하는 걸 좋아합니다. 다른 사람들에게 관심이 많고 기꺼이 도움을 주는 착한 심성을 가지고 있어요. \n' +
       '관심이 있는 일은 무엇이든지 수행해내는 능력과 열정이 있지만, 한 가지 일을 끝내기도 전에 몇 가지 다른 일을 또 벌이기도 해요. 통찰력과 창의력이 요구되지 않는 일에는 흥미를 느끼지 못해요.',
@@ -196,7 +213,7 @@ export const MBTI_INFO = {
     worst: 'INFJ',
     percentage: 15,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/estj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/estj_icon.png`,
+    icon: estj_icon,
     personality:
       '리더쉽이 있으므로 경제력이 가장 좋은 성격이에요. 조직적이고 절도있으며 무게감이 있어 엄격한 면이 있어요. 선배나, 교육자, 상사, 사장, 살짝 가부장적인 아버지 같은 당신은 매운 불닭떡볶이! 겉보기에 철저하고 무서워 보이지만, 주변 사람들에게 의리와 배려를 보여주어 그런 면을 좋아하는 사람들도 많아요. 스스로 빡세게 일을 하며, 현실적이면서 커다란 도전을 좋아합니다.',
     careful:
@@ -210,7 +227,7 @@ export const MBTI_INFO = {
     worst: 'INFP',
     percentage: 6,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/estp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/estp_icon.png`,
+    icon: estp_icon,
     personality:
       '개방적이고 관대해서 사람이나 사물에 대한 선입견이 별로 없는 당신! 강한 현실 감각으로 타협점을 잘 찾고 문제를 해결하는 능력이 뛰어나요. 또한 센스 있고 유머러스해서 새콤달콤한 과일 떡볶이같은 사람이에요. 어디서든 적응을 잘 하고 친구와 어울리기를 좋아해요.\n' +
       '운동, 음식 등 주로 오감으로 보고 듣고 만질 수 있는 삶의 모든 것을 즐겨요. 순발력이 뛰어나고 많은 사실들을 쉽게 기억하는 편이에요. 예술적인 멋과 판단력을 갖고 있으며, 재료를 다루는 데 능숙해요.\n' +
@@ -225,7 +242,7 @@ export const MBTI_INFO = {
     worst: 'INTJ',
     percentage: 5,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/esfj.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/esfj_icon.png`,
+    icon: esfj_icon,
     personality:
       '동정심이 많고 다른 사람들에게 관심이 많은 당신! 타고난 협력자로서 동료애가 많고 친절하며 능동적인 구성원이에요. 이야기하기를 좋아하고 다른 사람들을 잘 도와줘 인기가 많아요. 모든 좋은 토핑이 다 들어간 김치치즈떡볶이피자 같은 사람입니다. \n' +
       '사람을 잘 다뤄야하는 교직, 성직, 판매 특히 동정심을 필요로 하는 간호나 의료 분야에 적합해요. 참을성이 많고 정리정돈도 잘해요. 일이나 사람들에 대한 문제에 대하여 냉철한 입장을 취하기 어려워해요. 반대 의견에 부딪혔을 때나 요구가 거절당했을 때 마음의 상처를 받아요.',
@@ -240,7 +257,7 @@ export const MBTI_INFO = {
     worst: 'INTP',
     percentage: 5,
     imgUrl: `${S3_IMAGE_URL_PREFIX}/esfp.png`,
-    iconUrl: `${S3_IMAGE_URL_PREFIX}/esfp_icon.png`,
+    icon: esfp_icon,
     personality:
       '사교적이고 활동적이며 낙천적인 당신! 어떤 상황이든 잘 적응해 그때그때 달라지는 냉털 떡볶이같은 사람이에요. 주위의 사람이나 일어나는 일에 대하여 관심이 많고, 사실적인 상식이 풍부해요. 때로는 조금 수다스럽고, 진지함이 없고, 마무리에 약하지만, 어떤 조직이나 공동체에서 밝고 재미있는 분위기를 만들어요!',
     careful:

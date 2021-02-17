@@ -6,7 +6,7 @@ import ArrowIcon from '../assets/arrow.png';
 import DownloadIcon from '../assets/download.png';
 import Analytics from '../analyze/Analytics';
 import { Button, ShareButtons, TteokbokkiContainer } from '../components';
-import DefaultLogo from '../assets/tteokbokki.png';
+import DefaultLogo from '../assets/tteokbokki/tteokbokki.png';
 
 const resultImageStyle = css({
   position: 'relative',
@@ -26,6 +26,7 @@ const descStyle = css({
   fontSize: 12,
   marginBottom: 42,
   whiteSpace: 'pre-line',
+  wordBreak: 'keep-all',
 });
 
 const combiBoxStyle = css({
@@ -187,20 +188,14 @@ const TestResult = ({ type = '' }) => {
             <div css={combiTitleStyle}>같이 먹으면 환상인 떡볶이</div>
             <div css={combiDescStyle}>{bestObj.name}</div>
             <div>
-              <img
-                src={bestObj.iconUrl ? bestObj.iconUrl : DefaultLogo}
-                css={combiContentStyle}
-              />
+              <img src={bestObj.icon} css={combiContentStyle} />
             </div>
           </div>
           <div css={combiStyle} onClick={() => handleMovePage(worstType)}>
             <div css={combiTitleStyle}>같이 먹으면 배탈나는 떡볶이</div>
             <div css={combiDescStyle}>{worstObj.name}</div>
             <div>
-              <img
-                src={worstObj.iconUrl ? worstObj.iconUrl : DefaultLogo}
-                css={combiContentStyle}
-              />
+              <img src={worstObj.icon} css={combiContentStyle} />
             </div>
           </div>
         </div>

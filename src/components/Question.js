@@ -10,7 +10,7 @@ const containerStyle = css({
 const titleStyle = css({
   fontSize: 20,
   color: '#C8403E',
-  whiteSpace: 'pre-line',
+  wordBreak: 'keep-all',
 });
 
 const optionWrapperStyle = css({
@@ -20,7 +20,7 @@ const optionWrapperStyle = css({
 
 const optBtnStyle = css({
   display: 'block',
-  whiteSpace: 'pre-line',
+  wordBreak: 'keep-all',
   width: 260,
   minHeight: 80,
   padding: '18px 30px',

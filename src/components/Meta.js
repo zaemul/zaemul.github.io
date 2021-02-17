@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet';
 const Meta = () => {
   return (
     <Helmet>
-      <title>떡볶이 취향 분석 테스트</title>
-      <meta name="title" content="떡볶이 취향 테스트" />
+      <title>심리테스트와 심심풀이땅콩</title>
+      <meta name="title" content="심리테스트와 심심풀이땅콩" />
       <meta
         name="description"
-        content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 떡볶이 취향 테스트"
+        content="인공지능 A.I 빅데이터를 이용해 과학적이고(싶고) 정확한(것을 추구하는) 심리테스트와 심심풀이땅콩"
         data-react-helmet
       />
       <link rel="main-url" href={window.location.href} />
@@ -15,30 +15,30 @@ const Meta = () => {
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:url" content="https://ddangkong.me" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="떡볶이 취향 테스트" />
+      <meta property="og:title" content="심리테스트와 심심풀이땅콩" />
       <meta
         property="og:description"
-        content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 떡볶이 취향 테스트"
+        content="인공지능 A.I 빅데이터를 이용해 과학적이고(싶고) 정확한(것을 추구하는) 심리테스트와 심심풀이땅콩"
       />
       <meta
         property="og:image"
-        content="https://dl.dropboxusercontent.com/s/n9pr74fbv6gdiub/main-header.png?dl=0"
+        content="https://tteokbokki.s3.ap-northeast-2.amazonaws.com/main.png"
       />
-      <meta property="og:image:alt" content="떡볶이 취향 테스트" />
+      <meta property="og:image:alt" content="심리테스트와 심심풀이땅콩" />
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://ddangkong.me" />
-      <meta property="twitter:title" content="떡볶이 취향 테스트" />
+      <meta property="twitter:title" content="심리테스트와 심심풀이땅콩" />
       <meta
         property="twitter:description"
-        content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 떡볶이 취향 테스트"
+        content="인공지능 A.I 빅데이터를 이용해 과학적이고(싶고) 정확한(것을 추구하는) 심리테스트와 심심풀이땅콩"
       />
       <meta
         property="twitter:image"
-        content="https://dl.dropboxusercontent.com/s/n9pr74fbv6gdiub/main-header.png?dl=0"
+        content="https://tteokbokki.s3.ap-northeast-2.amazonaws.com/main.png"
       />
-      <meta property="twitter:image:alt" content="떡볶이 취향 테스트" />
+      <meta property="twitter:image:alt" content="심리테스트와 심심풀이땅콩" />
     </Helmet>
   );
 };
