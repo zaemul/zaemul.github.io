@@ -6,6 +6,17 @@ import Logo from '../assets/tteokbokki/tteokbokki.png';
 import ArrowIcon from '../assets/arrow.png';
 import MadeByIcon from '../assets/made_by.png';
 import Analytics from '../analyze/Analytics';
+import KakaoTopAd from '../advertisement/KakaoTop';
+
+const backgroundStyle = css({
+  backgroundColor: '#E5D6BC',
+});
+
+const containerStyle = css({
+  margin: '0 auto',
+  maxWidth: 450,
+  minWidth: 345,
+});
 
 const introStyle = css({
   margin: '40px auto 0 auto',
@@ -58,43 +69,50 @@ const TestMain = () => {
   };
 
   return (
-    <TteokbokkiContainer>
-      <div css={introStyle}>
-        <img src={Logo} css={logoStyle} />
-        <div css={{ width: '65%', margin: '0 auto' }}>
-          <h1 css={titleStyle}>떡볶이 테스트</h1>
-          <h2 css={descStyle}>
-            떡볶이로 알아보는 당신의 심리{'\n'}당신을 떡볶이로 표현한다면?
-          </h2>
-        </div>
-        <div css={{ margin: '0 auto' }}>
-          <Button css={startBtnStyle} onClick={handleStart}>
-            시작하기
-            <img
-              src={ArrowIcon}
-              css={{
-                verticalAlign: 'middle',
-                marginLeft: 5,
-                width: 32,
-                height: 32,
-              }}
-            />
-          </Button>
-        </div>
-        <ShareButtons
-          url={url}
-          imgUrl="https://tteokbokki.s3.ap-northeast-2.amazonaws.com/main.png"
-          title={'떡볶이 테스트'}
-          desc={'떡볶이로 알아보는 당신의 심리. 당신을 떡볶이로 표현한다면?'}
-        />
-        <div>
-          <img
-            src={MadeByIcon}
-            css={{ width: 110, marginTop: -10, marginBottom: 15 }}
-          />
+    <>
+      <div css={backgroundStyle}>
+        <div css={containerStyle}>
+          <KakaoTopAd />
         </div>
       </div>
-    </TteokbokkiContainer>
+      <TteokbokkiContainer>
+        <div css={introStyle}>
+          <img src={Logo} css={logoStyle} />
+          <div css={{ width: '65%', margin: '0 auto' }}>
+            <h1 css={titleStyle}>떡볶이 테스트</h1>
+            <h2 css={descStyle}>
+              떡볶이로 알아보는 당신의 심리{'\n'}당신을 떡볶이로 표현한다면?
+            </h2>
+          </div>
+          <div css={{ margin: '0 auto' }}>
+            <Button css={startBtnStyle} onClick={handleStart}>
+              시작하기
+              <img
+                src={ArrowIcon}
+                css={{
+                  verticalAlign: 'middle',
+                  marginLeft: 5,
+                  width: 32,
+                  height: 32,
+                }}
+              />
+            </Button>
+          </div>
+          <ShareButtons
+            url={url}
+            imgUrl="https://tteokbokki.s3.ap-northeast-2.amazonaws.com/main.png"
+            title={'떡볶이 테스트'}
+            desc={'떡볶이로 알아보는 당신의 심리. 당신을 떡볶이로 표현한다면?'}
+          />
+          <div>
+            <img
+              src={MadeByIcon}
+              css={{ width: 110, marginTop: -10, marginBottom: 15 }}
+            />
+          </div>
+        </div>
+      </TteokbokkiContainer>
+    </>
   );
 };
 

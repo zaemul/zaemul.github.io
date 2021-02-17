@@ -4,6 +4,17 @@ import { css } from '@emotion/react';
 import { questions } from '../question';
 import { Question, TteokbokkiContainer } from '../components';
 import Analytics from '../analyze/Analytics';
+import KakaoTopAd from '../advertisement/KakaoTop';
+
+const backgroundStyle = css({
+  backgroundColor: '#E5D6BC',
+});
+
+const containerStyle = css({
+  margin: '0 auto',
+  maxWidth: 450,
+  minWidth: 345,
+});
 
 const numberStyleWrapper = css({
   position: 'relative',
@@ -94,19 +105,26 @@ const TestQuestion = () => {
   };
 
   return (
-    <TteokbokkiContainer>
-      <div>
-        <div css={numberStyleWrapper}>
-          <div css={numberStyle}>
-            <span css={currentNumberStyle}>{getStepLabel(step + 1)}</span>
-            <span css={totalNumberStyle}>/ {TOTAL_STEP}</span>
-          </div>
+    <>
+      <div css={backgroundStyle}>
+        <div css={containerStyle}>
+          <KakaoTopAd />
         </div>
-        {step >= 0 && step < TOTAL_STEP && (
-          <Question question={questions[step]} handleSelect={handleSelect} />
-        )}
       </div>
-    </TteokbokkiContainer>
+      <TteokbokkiContainer>
+        <div>
+          <div css={numberStyleWrapper}>
+            <div css={numberStyle}>
+              <span css={currentNumberStyle}>{getStepLabel(step + 1)}</span>
+              <span css={totalNumberStyle}>/ {TOTAL_STEP}</span>
+            </div>
+          </div>
+          {step >= 0 && step < TOTAL_STEP && (
+            <Question question={questions[step]} handleSelect={handleSelect} />
+          )}
+        </div>
+      </TteokbokkiContainer>
+    </>
   );
 };
 

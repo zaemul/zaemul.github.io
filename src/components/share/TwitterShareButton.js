@@ -12,8 +12,9 @@ const imgStyle = css({
 const TwitterShareButton = ({ url }) => {
   const twitterDataObj = {
     baseUrl: 'http://twitter.com/share',
-    text: '떡볶이 테스트',
-    hashTags: 'test,mbti,떡볶이,심리테스트',
+    text:
+      '인공지능 A.I 빅데이터를 이용해 과학적이고(싶고) 정확한(것을 추구하는) 심리테스트와 심심풀이땅콩',
+    hashTags: '심리테스트,심심풀이땅콩',
   };
 
   const { baseUrl, text, hashTags } = twitterDataObj;

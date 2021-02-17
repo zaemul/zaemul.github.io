@@ -12,7 +12,8 @@ const imgStyle = css({
 const FacebookShareButton = ({ url }) => {
   const twitterDataObj = {
     baseUrl: 'https://www.facebook.com/sharer/sharer.php',
-    quote: '떡볶이 심리테스트',
+    quote:
+      '인공지능 A.I 빅데이터를 이용해 과학적이고(싶고) 정확한(것을 추구하는) 심리테스트와 심심풀이땅콩',
   };
 
   const { baseUrl, quote } = twitterDataObj;
