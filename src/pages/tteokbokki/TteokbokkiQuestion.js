@@ -1,20 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { css } from '@emotion/react';
-import { questions } from '../question';
-import { Question, TteokbokkiContainer } from '../components';
-import Analytics from '../analyze/Analytics';
-import KakaoTopAd from '../advertisement/KakaoTop';
 
-const backgroundStyle = css({
-  backgroundColor: '#E5D6BC',
-});
-
-const containerStyle = css({
-  margin: '0 auto',
-  maxWidth: 450,
-  minWidth: 345,
-});
+import { questions } from '../../question';
+import {
+  Question,
+  TteokbokkiContainer,
+  BackgroundContainer,
+} from '../../components';
+import { KakaoTop, KakaoBottom } from '../../advertisement';
+import Analytics from '../../analyze/Analytics';
 
 const numberStyleWrapper = css({
   position: 'relative',
@@ -40,7 +35,7 @@ const totalNumberStyle = css({
 
 const TOTAL_STEP = 12;
 
-const TestQuestion = () => {
+const TteokbokkiQuestion = () => {
   const { pathname } = useLocation();
   const history = useHistory();
 
@@ -106,11 +101,9 @@ const TestQuestion = () => {
 
   return (
     <>
-      <div css={backgroundStyle}>
-        <div css={containerStyle}>
-          <KakaoTopAd />
-        </div>
-      </div>
+      <BackgroundContainer backgroundColor={'#E5D6BC'}>
+        <KakaoTop />
+      </BackgroundContainer>
       <TteokbokkiContainer>
         <div>
           <div css={numberStyleWrapper}>
@@ -124,8 +117,16 @@ const TestQuestion = () => {
           )}
         </div>
       </TteokbokkiContainer>
+      <BackgroundContainer
+        backgroundColor={'#E5D6BC'}
+        style={{ paddingTop: 15 }}
+      >
+        <div css={{ textAlign: 'center' }}>
+          <KakaoBottom />
+        </div>
+      </BackgroundContainer>
     </>
   );
 };
 
-export default TestQuestion;
+export default TteokbokkiQuestion;

@@ -1,22 +1,19 @@
-import { css } from '@emotion/react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { BASE_URL, MBTI, MBTI_INFO } from '../enum';
-import ArrowIcon from '../assets/arrow.png';
-import DownloadIcon from '../assets/download.png';
-import Analytics from '../analyze/Analytics';
-import { Button, ShareButtons, TteokbokkiContainer } from '../components';
-import KakaoTopAd from '../advertisement/KakaoTop';
-import KakaoMiddleAd from '../advertisement/KakaoMiddle';
+import { css } from '@emotion/react';
 
-const backgroundStyle = css({
-  backgroundColor: '#E5D6BC',
-});
+import { BASE_URL, MBTI_INFO } from '../../enum';
+import Analytics from '../../analyze/Analytics';
+import {
+  Button,
+  ShareButtons,
+  TteokbokkiContainer,
+  BackgroundContainer,
+} from '../../components';
 
-const containerStyle = css({
-  margin: '0 auto',
-  maxWidth: 450,
-  minWidth: 345,
-});
+import { KakaoTop, KakaoMiddle, KakaoBottom } from '../../advertisement';
+
+import ArrowIcon from '../../assets/arrow.png';
+import DownloadIcon from '../../assets/download.png';
 
 const resultImageContainerStyle = css({
   textAlign: 'center',
@@ -134,7 +131,7 @@ const shareLineStyle = css({
   border: '1px solid #DA4C4A',
 });
 
-const TestResult = ({ type = '' }) => {
+const TteokbokkiResult = ({ type = '' }) => {
   const { pathname } = useLocation();
   const history = useHistory();
 
@@ -178,12 +175,12 @@ const TestResult = ({ type = '' }) => {
   return (
     <>
       <div css={resultImageContainerStyle}>
-        <KakaoTopAd />
+        <KakaoTop />
         <img src={resultObj.imgUrl} css={resultImageStyle} />
       </div>
 
       <div css={{ textAlign: 'center', backgroundColor: '#E5D6BC' }}>
-        <KakaoMiddleAd />
+        <KakaoMiddle />
       </div>
       <TteokbokkiContainer useIcon={false}>
         <div css={{ width: '80%', margin: '40px auto 0 auto' }}>
@@ -216,48 +213,51 @@ const TestResult = ({ type = '' }) => {
           </div>
         </div>
       </TteokbokkiContainer>
-      <div css={backgroundStyle}>
-        <div css={containerStyle}>
-          <div css={shareTextStyle}>
-            <div css={shareLineStyle}></div>
-            <h2 css={{ display: 'inline-block', margin: '0 12px' }}>
-              공유하기
-            </h2>
-            <div css={shareLineStyle}></div>
-          </div>
-          <div css={{ textAlign: 'center', margin: '0 auto' }}>
-            <ShareButtons
-              url={url}
-              imgUrl={resultObj.imgUrl}
-              title={`당신은 "${resultObj.name}!"`}
-              desc={'내가 무슨 떡볶이인지 궁금하다면?'}
-            />
-            <Button
-              css={[{ marginBottom: 15 }, restartBtnStyle]}
-              onClick={handleSaveImage}
+      <BackgroundContainer backgroundColor={'#E5D6BC'}>
+        <div css={shareTextStyle}>
+          <div css={shareLineStyle}></div>
+          <h2 css={{ display: 'inline-block', margin: '0 12px' }}>공유하기</h2>
+          <div css={shareLineStyle}></div>
+        </div>
+        <div css={{ textAlign: 'center', margin: '0 auto' }}>
+          <ShareButtons
+            url={url}
+            imgUrl={resultObj.imgUrl}
+            title={`당신은 "${resultObj.name}!"`}
+            desc={'내가 무슨 떡볶이인지 궁금하다면?'}
+          />
+          <Button css={[{ marginBottom: 15 }, restartBtnStyle]}>
+            <a
+              target="_blank"
+              css={{ textDecoration: 'none', color: '#fff' }}
+              download
+              href={resultObj.imgUrl}
             >
               이미지 저장하기
               <img src={DownloadIcon} css={btnIconStyle} />
-            </Button>
-            <Button
-              css={[{ marginBottom: 15 }, restartBtnStyle]}
-              onClick={handleGoToMain}
-            >
-              테스트 다시하기
-              <img src={ArrowIcon} css={btnIconStyle} />
-            </Button>
-            <Button
-              css={[{ marginBottom: 40 }, restartBtnStyle]}
-              onClick={handleGoToGlobalMain}
-            >
-              더 많은 테스트
-              <img src={ArrowIcon} css={btnIconStyle} />
-            </Button>
-          </div>
+            </a>
+          </Button>
+          <Button
+            css={[{ marginBottom: 15 }, restartBtnStyle]}
+            onClick={handleGoToMain}
+          >
+            테스트 다시하기
+            <img src={ArrowIcon} css={btnIconStyle} />
+          </Button>
+          <Button
+            css={[{ marginBottom: 40 }, restartBtnStyle]}
+            onClick={handleGoToGlobalMain}
+          >
+            더 많은 테스트
+            <img src={ArrowIcon} css={btnIconStyle} />
+          </Button>
         </div>
-      </div>
+        <div css={{ textAlign: 'center' }}>
+          <KakaoBottom />
+        </div>
+      </BackgroundContainer>
     </>
   );
 };
 
-export default TestResult;
+export default TteokbokkiResult;

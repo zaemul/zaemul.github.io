@@ -1,15 +1,6 @@
 import { css } from '@emotion/react';
-import Logo from '../assets/logo.png';
-
-const backgroundStyle = css({
-  backgroundColor: '#E5D6BC',
-});
-
-const containerStyle = css({
-  margin: '0 auto',
-  maxWidth: 450,
-  minWidth: 345,
-});
+import Logo from '../../assets/logo.png';
+import { BackgroundContainer } from '../../components';
 
 const borderStyle = css({
   position: 'relative',
@@ -38,18 +29,16 @@ const logoStyle = css({
 
 const TteokbokkiContainer = ({ useIcon = true, children }) => {
   return (
-    <div css={backgroundStyle}>
-      <div css={containerStyle}>
-        <div css={borderStyle}>
-          {useIcon && (
-            <div css={{ textAlign: 'center' }}>
-              <img src={Logo} css={logoStyle} />
-            </div>
-          )}
-          {children}
-        </div>
+    <BackgroundContainer backgroundColor={'#E5D6BC'}>
+      <div css={borderStyle}>
+        {useIcon && (
+          <div css={{ textAlign: 'center' }}>
+            <img src={Logo} css={logoStyle} />
+          </div>
+        )}
+        {children}
       </div>
-    </div>
+    </BackgroundContainer>
   );
 };
 

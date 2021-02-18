@@ -1,22 +1,19 @@
 import { useLocation, useHistory } from 'react-router-dom';
 import { css } from '@emotion/react';
-import { Button, TteokbokkiContainer, ShareButtons } from '../components';
-import { BASE_URL } from '../enum';
-import Logo from '../assets/tteokbokki/tteokbokki.png';
-import ArrowIcon from '../assets/arrow.png';
-import MadeByIcon from '../assets/made_by.png';
-import Analytics from '../analyze/Analytics';
-import KakaoTopAd from '../advertisement/KakaoTop';
 
-const backgroundStyle = css({
-  backgroundColor: '#E5D6BC',
-});
+import {
+  Button,
+  TteokbokkiContainer,
+  ShareButtons,
+  BackgroundContainer,
+} from '../../components';
+import Analytics from '../../analyze/Analytics';
+import { KakaoTop, KakaoBottom } from '../../advertisement';
+import { BASE_URL } from '../../enum';
 
-const containerStyle = css({
-  margin: '0 auto',
-  maxWidth: 450,
-  minWidth: 345,
-});
+import Logo from '../../assets/tteokbokki/tteokbokki.png';
+import ArrowIcon from '../../assets/arrow.png';
+import MadeByIcon from '../../assets/made_by.png';
 
 const introStyle = css({
   margin: '40px auto 0 auto',
@@ -51,7 +48,7 @@ const startBtnStyle = css({
   marginTop: 5,
 });
 
-const TestMain = () => {
+const TteokbokkiMain = () => {
   const { pathname } = useLocation();
   const history = useHistory();
 
@@ -70,11 +67,9 @@ const TestMain = () => {
 
   return (
     <>
-      <div css={backgroundStyle}>
-        <div css={containerStyle}>
-          <KakaoTopAd />
-        </div>
-      </div>
+      <BackgroundContainer backgroundColor={'#E5D6BC'}>
+        <KakaoTop />
+      </BackgroundContainer>
       <TteokbokkiContainer>
         <div css={introStyle}>
           <img src={Logo} css={logoStyle} />
@@ -112,8 +107,16 @@ const TestMain = () => {
           </div>
         </div>
       </TteokbokkiContainer>
+      <BackgroundContainer
+        backgroundColor={'#E5D6BC'}
+        style={{ paddingTop: 15 }}
+      >
+        <div css={{ textAlign: 'center' }}>
+          <KakaoBottom />
+        </div>
+      </BackgroundContainer>
     </>
   );
 };
 
-export default TestMain;
+export default TteokbokkiMain;

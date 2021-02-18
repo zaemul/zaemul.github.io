@@ -1,7 +1,9 @@
 export { default as Meta } from './Meta';
 export { default as Question } from './Question';
 export { default as Button } from './Button';
-export { default as TteokbokkiContainer } from './TteokbokkiContainer';
+export { default as MainCard } from './MainCard';
+export { default as TteokbokkiContainer } from './container/TteokbokkiContainer';
+export { default as BackgroundContainer } from './container/BackgroundContainer';
 export { default as ScrollToTop } from './ScrollToTop';
 
 /* Share buttons */

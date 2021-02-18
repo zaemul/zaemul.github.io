@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  /*fomt-family: 'BMEULJIRO';*/
   font-family: "배달의민족 을지로체 TTF", "배달의민족을지로체TTF", "bm-euljiro";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8,4 +9,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'BMEULJIRO';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

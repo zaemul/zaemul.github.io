@@ -1,8 +1,10 @@
 import { css } from '@emotion/react';
-import { ShareButtons } from '../components';
+
+import { MainCard, ShareButtons } from '../components';
 import { BASE_URL } from '../enum';
-import KakaoTopAd from '../advertisement/KakaoTop';
-import MainCard from '../components/MainCard';
+import { KakaoTop, KakaoBottom } from '../advertisement';
+import { BackgroundContainer } from '../components';
+
 import TteokbokkiLogo from '../assets/tteokbokki/tteokbokki.png';
 import OceanLogo from '../assets/ocean/ocean.png';
 import CoronaLogo from '../assets/corona/corona.png';
@@ -10,16 +12,6 @@ import Main1 from '../assets/main_1.png';
 import Main2 from '../assets/main_2.png';
 import Main3 from '../assets/main_3.png';
 import Main4 from '../assets/main_4.png';
-
-const backgroundStyle = css({
-  backgroundColor: '#4CB0DB',
-});
-
-const containerStyle = css({
-  margin: '0 auto',
-  maxWidth: 450,
-  minWidth: 345,
-});
 
 const introStyle = css({
   textAlign: 'center',
@@ -33,8 +25,8 @@ const headerStyle = css({
   backgroundImage: `url(${Main1}), url(${Main2}), url(${Main3}), url(${Main4})`,
   backgroundSize: '104px, 70px, 74px, 116px',
   backgroundRepeat: 'no-repeat',
-  backgroundPositionX: '320px, 0px, 53px, 300px',
-  backgroundPositionY: '15px, 30px, 330px, 250px',
+  backgroundPositionX: '270px, 0px, 53px, 250px',
+  backgroundPositionY: '0px, 30px, 330px, 250px',
 });
 
 const Services = [
@@ -66,84 +58,86 @@ const Services = [
 
 const Main = () => {
   return (
-    <div css={backgroundStyle}>
-      <div css={containerStyle}>
-        <div css={introStyle}>
-          <KakaoTopAd />
-          <header css={headerStyle}>
-            <h3 css={{ fontSize: 16, lineHeight: 1.3 }}>
-              인공지능 A.I 빅데이터를 활용해
-              <br />
-              과학적이고(싶고)
-              <br />
-              정확한(것을 추구하는)
-            </h3>
-            <h1
-              css={{
-                wordBreak: 'keep-all',
-                fontSize: 55,
-                marginTop: 28,
-                marginBottom: 66,
-              }}
-            >
-              심리테스트와 심심풀이땅콩
-            </h1>
-            <div
-              css={{
-                paddingBottom: 32,
-                color: '#fff',
-                opacity: 0.5,
-                fontSize: 13,
-              }}
-            >
-              Made by. 땅콩스튜디오
-            </div>
-          </header>
-          <div>
-            {Services.map((service) => {
-              const {
-                backgroundColor,
-                number,
-                title,
-                desc,
-                path,
-                logo,
-              } = service;
-              return (
-                <MainCard
-                  backgroundColor={backgroundColor}
-                  title={title}
-                  number={number}
-                  desc={desc}
-                  path={path}
-                  logo={logo}
-                />
-              );
-            })}
-          </div>
-          <ShareButtons
-            url={BASE_URL}
-            title={'심리 테스트'}
-            desc={'심리 테스트 설명'}
-          />
-          <footer
+    <BackgroundContainer backgroundColor={'#4CB0DB'}>
+      <div css={introStyle}>
+        <KakaoTop />
+        <header css={headerStyle}>
+          <h3 css={{ fontSize: 16, lineHeight: 1.3 }}>
+            인공지능 A.I 빅데이터를 활용해
+            <br />
+            과학적이고(싶고)
+            <br />
+            정확한(것을 추구하는)
+          </h3>
+          <h1
             css={{
-              color: '#fff',
-              fontFamily: 'Roboto',
-              fontSize: 12,
-              paddingBottom: 30,
+              wordBreak: 'keep-all',
+              fontSize: 55,
+              marginTop: 28,
+              marginBottom: 66,
             }}
           >
-            <div css={{ color: '#fff', marginBottom: 10 }}>
-              광고 및 후원문의: ddangkong.studio@gmail.com
-            </div>
-            <div css={{ opacity: 0.5 }}>
-              Copyright © 2021 ddangkong studio All rights reserved
-            </div>
-          </footer>
+            심리테스트와 심심풀이땅콩
+          </h1>
+          <div
+            css={{
+              paddingBottom: 32,
+              color: '#fff',
+              opacity: 0.5,
+              fontSize: 13,
+            }}
+          >
+            Made by. 땅콩스튜디오
+          </div>
+        </header>
+        <div>
+          {Services.map((service) => {
+            const {
+              backgroundColor,
+              number,
+              title,
+              desc,
+              path,
+              logo,
+            } = service;
+            return (
+              <MainCard
+                backgroundColor={backgroundColor}
+                title={title}
+                number={number}
+                desc={desc}
+                path={path}
+                logo={logo}
+              />
+            );
+          })}
+        </div>
+        <ShareButtons
+          url={BASE_URL}
+          title={'심리 테스트'}
+          desc={'심리 테스트 설명'}
+        />
+        <footer
+          css={{
+            color: '#fff',
+            fontFamily: 'Roboto',
+            fontSize: 12,
+            paddingBottom: 30,
+          }}
+        >
+          <div css={{ color: '#fff', marginBottom: 10 }}>
+            광고 및 후원문의: ddangkong.studio@gmail.com
+          </div>
+          <div css={{ opacity: 0.5 }}>
+            Copyright © 2021 ddangkong studio All rights reserved
+          </div>
+        </footer>
+
+        <div css={{ textAlign: 'center' }}>
+          <KakaoBottom />
         </div>
       </div>
-    </div>
+    </BackgroundContainer>
   );
 };
 
