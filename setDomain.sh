@@ -1,4 +1,8 @@
-mkdir build
+if [ ! -d build ]; then
+  mkdir build
+fi
 cd build
-echo "ddangkong.me" > CNAME
+if [ ! -f CNAME ]; then
+  echo "ddangkong.me" > CNAME
+fi
 cd ..

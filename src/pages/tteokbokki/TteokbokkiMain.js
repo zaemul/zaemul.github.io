@@ -95,7 +95,7 @@ const TteokbokkiMain = () => {
           </div>
           <ShareButtons
             url={url}
-            imgUrl="https://tteokbokki.s3.ap-northeast-2.amazonaws.com/main.png"
+            imgUrl="https://tteokbokki.s3.ap-northeast-2.amazonaws.com/tteokbokki_main.png"
             title={'떡볶이 테스트'}
             desc={'떡볶이로 알아보는 당신의 심리. 당신을 떡볶이로 표현한다면?'}
           />

@@ -9,7 +9,7 @@ import { css } from '@emotion/react';
 
 const buttonGroupStyle = css({
   marginTop: 20,
-  marginBottom: 30,
+  marginBottom: 20,
 });
 
 const ShareButtons = ({ url, imgUrl, title, desc, useImageBtn = false }) => {

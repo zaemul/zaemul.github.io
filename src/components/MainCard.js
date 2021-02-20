@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 const containerStyle = (bgColor, img) => {
   return css({
+    position: 'relative',
     cursor: 'pointer',
     margin: '0 auto',
     width: 335,
@@ -17,6 +18,7 @@ const containerStyle = (bgColor, img) => {
     borderRadius: 15,
     border: '2px solid #333',
     marginBottom: 20,
+    boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.2)',
     '&:active': {
       opacity: 0.7,
     },
@@ -26,6 +28,20 @@ const containerStyle = (bgColor, img) => {
 const contentWrapper = css({
   textAlign: 'left',
   color: '#fff',
+});
+
+const disableStyle = css({
+  position: 'absolute',
+  top: -2,
+  left: -2,
+  borderRadius: 15,
+  fontSize: 50,
+  width: 335,
+  height: 210,
+  color: '#bbb',
+  backgroundColor: '#555',
+  border: '2px solid rgba(0, 0, 0, 0.5)',
+  opacity: 0.8,
 });
 
 const imageStyle = css({
@@ -55,7 +71,15 @@ const descStyle = css({
   whiteSpace: 'pre-line',
 });
 
-const MainCard = ({ backgroundColor, number, title, desc, path, logo }) => {
+const MainCard = ({
+  backgroundColor,
+  number,
+  title,
+  desc,
+  path,
+  logo,
+  disabled,
+}) => {
   const history = useHistory();
 
   const goToTestMain = (type) => {
@@ -70,7 +94,11 @@ const MainCard = ({ backgroundColor, number, title, desc, path, logo }) => {
   return (
     <section
       css={containerStyle(backgroundColor, logo)}
-      onClick={() => goToTestMain(path)}
+      onClick={() => {
+        if (!disabled) {
+          goToTestMain(path);
+        }
+      }}
     >
       <div css={contentWrapper}>
         <img src={logo} css={imageStyle} />
@@ -78,6 +106,11 @@ const MainCard = ({ backgroundColor, number, title, desc, path, logo }) => {
         <div css={titleStyle}>{title}</div>
         <div css={descStyle}>{desc}</div>
       </div>
+      {disabled && (
+        <div css={disableStyle}>
+          <p css={{ marginTop: 75, marginLeft: 20 }}>준비중...</p>
+        </div>
+      )}
     </section>
   );
 };

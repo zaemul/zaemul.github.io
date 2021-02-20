@@ -112,8 +112,9 @@ const restartBtnStyle = css({
 const btnIconStyle = css({
   verticalAlign: 'middle',
   marginLeft: 5,
-  width: 32,
-  height: 32,
+  marginBottom: 2,
+  width: 25,
+  height: 25,
 });
 
 const shareTextStyle = css({
@@ -226,7 +227,7 @@ const TteokbokkiResult = ({ type = '' }) => {
             title={`당신은 "${resultObj.name}!"`}
             desc={'내가 무슨 떡볶이인지 궁금하다면?'}
           />
-          <Button css={[{ marginBottom: 15 }, restartBtnStyle]}>
+          <Button css={[{ marginBottom: 15, marginTop: 40 }, restartBtnStyle]}>
             <a
               target="_blank"
               css={{ textDecoration: 'none', color: '#fff' }}

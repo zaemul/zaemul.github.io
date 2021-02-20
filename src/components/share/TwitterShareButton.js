@@ -3,10 +3,10 @@ import { css } from '@emotion/react';
 import Analytics from '../../analyze/Analytics';
 
 const imgStyle = css({
-  width: 32,
-  height: 32,
-  marginRight: 4,
-  marginLeft: 4,
+  width: 45,
+  height: 45,
+  marginRight: 8,
+  marginLeft: 8,
 });
 
 const TwitterShareButton = ({ url }) => {

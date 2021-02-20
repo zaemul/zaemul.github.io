@@ -45,6 +45,7 @@ const Services = [
     backgroundColor: '#90D8F9',
     path: '',
     logo: OceanLogo,
+    disabled: true,
   },
   {
     number: '#.03',
@@ -53,6 +54,7 @@ const Services = [
     backgroundColor: '#5888E5',
     path: '',
     logo: CoronaLogo,
+    disabled: true,
   },
 ];
 
@@ -99,6 +101,7 @@ const Main = () => {
               desc,
               path,
               logo,
+              disabled,
             } = service;
             return (
               <MainCard
@@ -108,21 +111,25 @@ const Main = () => {
                 desc={desc}
                 path={path}
                 logo={logo}
+                disabled={disabled}
               />
             );
           })}
         </div>
+        {/*
         <ShareButtons
           url={BASE_URL}
           title={'심리 테스트'}
           desc={'심리 테스트 설명'}
         />
+        */}
         <footer
           css={{
             color: '#fff',
             fontFamily: 'Roboto',
             fontSize: 12,
             paddingBottom: 30,
+            marginTop: 60,
           }}
         >
           <div css={{ color: '#fff', marginBottom: 10 }}>
