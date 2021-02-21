@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.2defb184.chunk.css",
-    "main.js": "/static/js/main.7bdf268f.chunk.js",
-    "main.js.map": "/static/js/main.7bdf268f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4d527d48.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4d527d48.js.map",
+    "main.js": "/static/js/main.2215b635.chunk.js",
+    "main.js.map": "/static/js/main.2215b635.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8ac08577.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8ac08577.js.map",
     "static/css/2.a11c1e4b.chunk.css": "/static/css/2.a11c1e4b.chunk.css",
-    "static/js/2.c238c34e.chunk.js": "/static/js/2.c238c34e.chunk.js",
-    "static/js/2.c238c34e.chunk.js.map": "/static/js/2.c238c34e.chunk.js.map",
-    "static/js/3.070bfcbf.chunk.js": "/static/js/3.070bfcbf.chunk.js",
-    "static/js/3.070bfcbf.chunk.js.map": "/static/js/3.070bfcbf.chunk.js.map",
+    "static/js/2.d8d6447f.chunk.js": "/static/js/2.d8d6447f.chunk.js",
+    "static/js/2.d8d6447f.chunk.js.map": "/static/js/2.d8d6447f.chunk.js.map",
+    "static/js/3.de5727da.chunk.js": "/static/js/3.de5727da.chunk.js",
+    "static/js/3.de5727da.chunk.js.map": "/static/js/3.de5727da.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.a11c1e4b.chunk.css.map": "/static/css/2.a11c1e4b.chunk.css.map",
     "static/css/main.2defb184.chunk.css.map": "/static/css/main.2defb184.chunk.css.map",
-    "static/js/2.c238c34e.chunk.js.LICENSE.txt": "/static/js/2.c238c34e.chunk.js.LICENSE.txt",
+    "static/js/2.d8d6447f.chunk.js.LICENSE.txt": "/static/js/2.d8d6447f.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/BMEULJIROTTF.56364bc5.ttf",
     "static/media/corona.57fdd3c2.png": "/static/media/corona.57fdd3c2.png",
+    "static/media/ddangkong.1527251f.png": "/static/media/ddangkong.1527251f.png",
     "static/media/enfj_icon.57662a19.png": "/static/media/enfj_icon.57662a19.png",
     "static/media/enfp_icon.6d8b960e.png": "/static/media/enfp_icon.6d8b960e.png",
     "static/media/entj_icon.7ce8e239.png": "/static/media/entj_icon.7ce8e239.png",
@@ -36,10 +37,10 @@
     "static/media/tteokbokki.b714abc5.png": "/static/media/tteokbokki.b714abc5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4d527d48.js",
+    "static/js/runtime-main.8ac08577.js",
     "static/css/2.a11c1e4b.chunk.css",
-    "static/js/2.c238c34e.chunk.js",
+    "static/js/2.d8d6447f.chunk.js",
     "static/css/main.2defb184.chunk.css",
-    "static/js/main.7bdf268f.chunk.js"
+    "static/js/main.2215b635.chunk.js"
   ]
 }
