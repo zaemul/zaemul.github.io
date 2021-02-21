@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import { css } from '@emotion/react';
 
@@ -8,6 +9,7 @@ import {
   ShareButtons,
   TteokbokkiContainer,
   BackgroundContainer,
+  Loader,
 } from '../../components';
 
 import { KakaoTop, KakaoMiddle, KakaoBottom } from '../../advertisement';
@@ -28,8 +30,8 @@ const resultImageStyle = css({
 });
 
 const titleStyle = css({
-  margin: '10px auto 10px auto',
-  fontSize: 15,
+  margin: '0 auto 10px auto',
+  fontSize: 18,
   color: '#C8403E',
 });
 
@@ -37,8 +39,8 @@ const descStyle = css({
   fontFamily: 'Roboto',
   marginLeft: 3,
   color: '#333',
-  fontSize: 12,
-  marginBottom: 42,
+  fontSize: 14,
+  marginBottom: 22,
   whiteSpace: 'pre-line',
   wordBreak: 'keep-all',
 });
@@ -59,7 +61,7 @@ const combiStyle = css({
   flexDirection: 'column',
   justifyContent: 'space-between',
   width: '47%',
-  height: 150,
+  height: 170,
   border: '1px solid #DA4C4A',
   color: '#C8403E',
   textAlign: 'center',
@@ -71,9 +73,9 @@ const percentBorderStyle = css({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '80%',
+  width: '90%',
   margin: '35px auto 10px auto',
-  height: 35,
+  height: 47,
   color: '#fff',
   backgroundColor: '#DA4C4A',
 });
@@ -81,25 +83,25 @@ const percentBorderStyle = css({
 const percentContentStyle = css({
   width: '95%',
   textAlign: 'center',
-  padding: 3,
-  fontSize: 15,
+  padding: '8px 1px',
+  margin: '20px 0',
+  fontSize: 17,
   border: '1px solid rgb(221, 129, 130)',
 });
 
 const combiTitleStyle = css({
-  paddingTop: 5,
-  fontSize: 12,
-  height: 20,
+  paddingTop: 8,
+  fontSize: 16,
+  height: 26,
   color: '#fff',
   backgroundColor: '#DA4C4A',
 });
 
 const combiDescStyle = css({
-  margin: '8px auto 5px auto',
+  margin: '0 auto 5px auto',
   wordBreak: 'keep-all',
   width: '80%',
-  fontSize: 14,
-  marginTop: 8,
+  fontSize: 16,
   marginBottom: 5,
 });
 
@@ -135,10 +137,17 @@ const shareLineStyle = css({
 const TteokbokkiResult = ({ type = '' }) => {
   const { pathname } = useLocation();
   const history = useHistory();
+  const [loading, setLoading] = useState(true);
 
   const paths = pathname.split('/').filter((path) => !!path);
   const service = paths[0] || '';
   const url = `${BASE_URL}/${service}/result/${type}`;
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, [loading]);
 
   const handleGoToMain = () => {
     Analytics.sendEvent({
@@ -151,10 +160,6 @@ const TteokbokkiResult = ({ type = '' }) => {
 
   const handleMovePage = (type) => {
     history.push(`/${service}/result/${type}`);
-  };
-
-  const handleSaveImage = () => {
-    /* Save Image */
   };
 
   const handleGoToGlobalMain = () => {
@@ -184,11 +189,18 @@ const TteokbokkiResult = ({ type = '' }) => {
         <KakaoMiddle />
       </div>
       <TteokbokkiContainer useIcon={false}>
-        <div css={{ width: '80%', margin: '40px auto 0 auto' }}>
+        <div css={{ width: '90%', margin: '25px auto 0 auto' }}>
           <h4 css={titleStyle}>당신의 성격</h4>
           <div css={descStyle}>{resultObj.personality}</div>
-          <h4 css={titleStyle}>조심하세요</h4>
-          <div css={descStyle}>{resultObj.careful}</div>
+          <div css={[descStyle, { marginTop: 30 }]}>
+            {resultObj.detail.map((desc, index) => {
+              return (
+                <p key={index} css={{ margin: '0 0 3px 0' }}>
+                  - {desc}
+                </p>
+              );
+            })}
+          </div>
         </div>
 
         <div css={percentBorderStyle}>
@@ -197,16 +209,16 @@ const TteokbokkiResult = ({ type = '' }) => {
           </div>
         </div>
 
-        <div css={[{ width: '80%' }, combiBoxStyle]}>
+        <div css={[{ width: '90%' }, combiBoxStyle]}>
           <div css={combiStyle} onClick={() => handleMovePage(bestType)}>
-            <div css={combiTitleStyle}>같이 먹으면 환상인 떡볶이</div>
+            <div css={combiTitleStyle}>같이 먹으면 환상궁합</div>
             <div css={combiDescStyle}>{bestObj.name}</div>
             <div>
               <img src={bestObj.icon} css={combiContentStyle} />
             </div>
           </div>
           <div css={combiStyle} onClick={() => handleMovePage(worstType)}>
-            <div css={combiTitleStyle}>같이 먹으면 배탈나는 떡볶이</div>
+            <div css={combiTitleStyle}>같이 먹으면 배탈궁합</div>
             <div css={combiDescStyle}>{worstObj.name}</div>
             <div>
               <img src={worstObj.icon} css={combiContentStyle} />

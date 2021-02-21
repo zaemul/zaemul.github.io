@@ -5,6 +5,7 @@ export { default as MainCard } from './MainCard';
 export { default as TteokbokkiContainer } from './container/TteokbokkiContainer';
 export { default as BackgroundContainer } from './container/BackgroundContainer';
 export { default as ScrollToTop } from './ScrollToTop';
+export { default as Loader } from './Loader';
 
 /* Share buttons */
 export { default as CopyUrlButton } from './share/CopyUrlButton';

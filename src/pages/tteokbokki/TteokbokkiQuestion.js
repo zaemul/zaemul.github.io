@@ -7,6 +7,7 @@ import {
   Question,
   TteokbokkiContainer,
   BackgroundContainer,
+  Loader,
 } from '../../components';
 import { KakaoTop, KakaoBottom } from '../../advertisement';
 import Analytics from '../../analyze/Analytics';
@@ -44,6 +45,7 @@ const TteokbokkiQuestion = () => {
 
   const [step, setStep] = useState(0);
   const [result, setResult] = useState([0, 0, 0, 0]);
+  const [loading, setLoading] = useState(false);
 
   const handleNext = () => {
     Analytics.sendEvent({
@@ -74,7 +76,11 @@ const TteokbokkiQuestion = () => {
 
   useEffect(() => {
     if (step === TOTAL_STEP) {
-      handleGoResult(analyze(result));
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        handleGoResult(analyze(result));
+      }, 3000);
     }
   }, [step, result]);
 
@@ -104,19 +110,28 @@ const TteokbokkiQuestion = () => {
       <BackgroundContainer backgroundColor={'#E5D6BC'}>
         <KakaoTop />
       </BackgroundContainer>
-      <TteokbokkiContainer>
-        <div>
-          <div css={numberStyleWrapper}>
-            <div css={numberStyle}>
-              <span css={currentNumberStyle}>{getStepLabel(step + 1)}</span>
-              <span css={totalNumberStyle}>/ {TOTAL_STEP}</span>
+      {!loading ? (
+        <TteokbokkiContainer>
+          <div>
+            <div css={numberStyleWrapper}>
+              <div css={numberStyle}>
+                <span css={currentNumberStyle}>{getStepLabel(step + 1)}</span>
+                <span css={totalNumberStyle}>/ {TOTAL_STEP}</span>
+              </div>
             </div>
+            {step >= 0 && step < TOTAL_STEP && (
+              <Question
+                question={questions[step]}
+                handleSelect={handleSelect}
+              />
+            )}
           </div>
-          {step >= 0 && step < TOTAL_STEP && (
-            <Question question={questions[step]} handleSelect={handleSelect} />
-          )}
-        </div>
-      </TteokbokkiContainer>
+        </TteokbokkiContainer>
+      ) : (
+        <BackgroundContainer backgroundColor={'#E5D6BC'}>
+          <Loader />
+        </BackgroundContainer>
+      )}
       <BackgroundContainer
         backgroundColor={'#E5D6BC'}
         style={{ paddingTop: 15 }}
