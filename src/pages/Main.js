@@ -93,7 +93,7 @@ const Main = () => {
           </div>
         </header>
         <div>
-          {Services.map((service) => {
+          {Services.map((service, index) => {
             const {
               backgroundColor,
               number,
@@ -105,6 +105,7 @@ const Main = () => {
             } = service;
             return (
               <MainCard
+                key={index}
                 backgroundColor={backgroundColor}
                 title={title}
                 number={number}

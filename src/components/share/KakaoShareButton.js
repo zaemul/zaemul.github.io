@@ -19,13 +19,19 @@ const buttonObj = (url, imgUrl, title, desc) => {
         },
         {
           title: '테스트하기',
-          link: { mobileWebUrl: BASE_URL, webUrl: BASE_URL },
+          link: {
+            mobileWebUrl: `${BASE_URL}/tteokbokki/main`,
+            webUrl: `${BASE_URL}/tteokbokki/main`,
+          },
         },
       ]
     : [
         {
           title: '테스트하기',
-          link: { mobileWebUrl: BASE_URL, webUrl: BASE_URL },
+          link: {
+            mobileWebUrl: `${BASE_URL}/tteokbokki/main`,
+            webUrl: `${BASE_URL}/tteokbokki/main`,
+          },
         },
       ];
   return {

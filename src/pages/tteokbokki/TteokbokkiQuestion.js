@@ -85,9 +85,9 @@ const TteokbokkiQuestion = () => {
   }, [step, result]);
 
   const analyze = (result) => {
-    const first = result[0] > 1 ? 'I' : 'E';
-    const second = result[1] > 1 ? 'N' : 'S';
-    const third = result[2] > 1 ? 'F' : 'T';
+    const first = result[0] > 1 ? 'E' : 'I';
+    const second = result[1] > 1 ? 'S' : 'N';
+    const third = result[2] > 1 ? 'T' : 'F';
     const fourth = result[3] > 1 ? 'J' : 'P';
     return `${first}${second}${third}${fourth}`;
   };
